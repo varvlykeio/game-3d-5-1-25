@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "game-3d-15-12.sln"
+    "dotnet.defaultSolution": "game-3d-5-1-25.sln"
 }
