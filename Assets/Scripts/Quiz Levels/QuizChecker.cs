@@ -33,6 +33,7 @@ namespace QuizCol {
                     events.QuizStart = true;
                     events.Difficulty = dif;
                     events.currentlevel = level;
+                    events.QuizActive = true;
 
                 }
             }

@@ -299,9 +299,12 @@ namespace Gamemanagera{
         /// </summary>
         public void RestartGame()
         {
+            events.quizScore += events.CurrentFinalScore;
+            events.TotalScore += events.CurrentFinalScore;
+            events.QuizActive = false;
             //If next level is the first level, meaning that we start playing a game again, reset the final score.
             if (events.level == 1) { events.CurrentFinalScore = 0; }
-
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         /// <summary>

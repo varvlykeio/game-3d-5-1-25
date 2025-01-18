@@ -31,7 +31,7 @@ namespace MyVars{
 
                                 // CoinR[level , x/y/z....]                    v-int-v
                                 //     x1  ,   x2  ,    y   ,   z1  ,  z2  ,   ammount 
-        public float[,] CoinR =  { {  -51  ,  -32  ,  0.5f  ,  -24   , -20  ,     5     },    //Level 0
+        public float[,] CoinR =  { {  -241.3f  ,  -235.7f  ,  0.5f  ,  44.3f  , 49.54f  ,     5     },    //Level 0
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     2     },    //Level 1 -   Math      }
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     0     },    //Level 2 -  Coding     |
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     0     },    //Level 3 - History     |  Coordinates to 
@@ -50,7 +50,7 @@ namespace MyVars{
         /*QuizCols1 scriptInstance1 = null;
         QuizCols2 scriptInstance2 = null;
         QuizCols3 scriptInstance3 = null;*/
-        SceneChanger scriptInstance4 = null;
+        //SceneChanger scriptInstance4 = null;
 
         public void Start(){
                            
@@ -143,10 +143,16 @@ namespace MyVars{
         }
 
         public void OnApplicationQuit(){       
-           events.TotalScore = 0;
-           events.currentlevel = 0;
-           events.CursorLock = true;
-           events.QuizStart = false;
+            events.TotalScore = 0;
+            events.currentlevel = 0;
+            events.CursorLock = true;
+            events.QuizStart = false;
+            events.rtime = 600;
+            events.quizScore = 0;
+            events.coinScore = 0;
+            events.timerScore = 0;
+            events.isPaused = false;
+            events. GameFinished= false;
         }
 
        

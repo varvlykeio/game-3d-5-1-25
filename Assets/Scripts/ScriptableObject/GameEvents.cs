@@ -34,5 +34,17 @@ namespace GameEv{
         public                  bool                                FirstRun                        = true;
 		public                  bool                                QuizStart                       = false;
         public                  int                                 Difficulty                      = 0;
+        public                  float                               rtime                           = 600;
+        public                  int                                 score                           = 0;
+        public                  int                                 coinScore                       = 0;
+        public                  int                                 quizScore                       = 0;
+        public                  int                                 timerScore                      = 0;
+        public                  int                                 TScore                          = 0;  
+        public                  float                               timeRemaining                   = 0;  
+        public                  float                               timegravity                     = 0.5f;         
+        public                  bool                                isPaused                        = false;
+        public                  bool                                QuizActive                      = false; 
+        public                  int                                 HighScore                       = 0;
+        public                  bool                                GameFinished                    = false;
     }
 }
