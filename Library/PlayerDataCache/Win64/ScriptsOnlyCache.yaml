@@ -8,12 +8,15 @@ ScriptsOnlyBuild:
     - FirstPersonController
     - GameEv.GameEvents
     - Gamemanagera.GameManager
+    - Maze1
     - MyVars.MyVarsClass
     - OWDoor.OWDoors
     - QuizCol.QuizCols
     - QuizVars.Quiz
-    - RestartTrigger
+    - ResolutionScore
     - ScoreManager
+    - SettingsPanel
+    - Timer
     - Turn_Move
     - UIManager
     - UiAppear
@@ -44,10 +47,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -107,6 +108,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: Maze1
+    methodName: MazeStart
+  - assembly: Assembly-CSharp
+    fullTypeName: ResolutionScore
+    methodName: GameEnd
+  - assembly: Assembly-CSharp
     fullTypeName: Gamemanagera.GameManager
     methodName: CursorLockOnQuizEnd
   sceneClasses:
@@ -164,8 +171,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1620}
     - Class: 114
-      Script: {instanceID: 1646}
-    - Class: 114
       Script: {instanceID: 1670}
     - Class: 114
       Script: {instanceID: 2246}
@@ -196,29 +201,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4248}
     - Class: 114
-      Script: {instanceID: 4500}
+      Script: {instanceID: 4360}
     - Class: 114
-      Script: {instanceID: 4510}
+      Script: {instanceID: 4502}
     - Class: 114
-      Script: {instanceID: 4516}
+      Script: {instanceID: 4512}
     - Class: 114
-      Script: {instanceID: 5258}
+      Script: {instanceID: 4518}
     - Class: 114
-      Script: {instanceID: 5266}
+      Script: {instanceID: 5260}
     - Class: 114
-      Script: {instanceID: 5534}
+      Script: {instanceID: 5268}
     - Class: 114
-      Script: {instanceID: 5890}
+      Script: {instanceID: 5384}
     - Class: 114
-      Script: {instanceID: 6012}
+      Script: {instanceID: 5536}
     - Class: 114
-      Script: {instanceID: 6350}
+      Script: {instanceID: 5892}
     - Class: 114
-      Script: {instanceID: 6358}
+      Script: {instanceID: 6014}
     - Class: 114
-      Script: {instanceID: 7200}
+      Script: {instanceID: 6190}
     - Class: 114
-      Script: {instanceID: 7444}
+      Script: {instanceID: 6354}
+    - Class: 114
+      Script: {instanceID: 6362}
+    - Class: 114
+      Script: {instanceID: 6584}
+    - Class: 114
+      Script: {instanceID: 7204}
+    - Class: 114
+      Script: {instanceID: 7448}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -390,7 +403,7 @@ ScriptsOnlyBuild:
     className: Movement
   - hash:
       serializedVersion: 2
-      Hash: 3dd8884a16f4a81f147ac41a0cc0f53b
+      Hash: cf942eef9d045bcf3e7bb488a3e70ad1
     assemblyName: Assembly-CSharp
     namespaceName: GameEv
     className: GameEvents
@@ -738,6 +751,12 @@ ScriptsOnlyBuild:
     className: DictionaryAsset
   - hash:
       serializedVersion: 2
+      Hash: ccfe56bde83a5a95cd310fbd8e9c568e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SettingsPanel
+  - hash:
+      serializedVersion: 2
       Hash: e7e95903ca66d58e1a7cbd71f824e16d
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -912,7 +931,7 @@ ScriptsOnlyBuild:
     className: NavMeshModifierVolume
   - hash:
       serializedVersion: 2
-      Hash: e6581c437c7953b26a146f0b2bb2ea3b
+      Hash: 4627de03b091fa0af35c5709e6c3b594
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Maze1
@@ -978,16 +997,16 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 0dcabc096705eb51a694eabf3f58e157
-    assemblyName: Assembly-CSharp
-    namespaceName: Scenes
-    className: SceneChanger
-  - hash:
-      serializedVersion: 2
       Hash: 9637dcdf3068a91dfe653e61bb82f13d
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 54bcceeccd9986ae2c6bbc274c179c24
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ResolutionScore
   - hash:
       serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
@@ -1012,12 +1031,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Scrollbar
-  - hash:
-      serializedVersion: 2
-      Hash: 069df05d9855f3bf5820d9ce8ba99394
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Maze3
   - hash:
       serializedVersion: 2
       Hash: 13f262cc0741566a7ab72682984bc3e1
@@ -1048,6 +1061,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: fcc4fafc45fd9d15428f1a88b229519a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Timer
   - hash:
       serializedVersion: 2
       Hash: f669be52680c88846b2093fd41d1e06e
@@ -1254,12 +1273,6 @@ ScriptsOnlyBuild:
     className: UnityOnMouseEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 77eb8c197130a94c59729a3e72d420a9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Maze2
-  - hash:
-      serializedVersion: 2
       Hash: 4fcf0bb4aff1d14a1dfcdedc4b07bd05
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -1272,12 +1285,6 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 4fc54feed0c07e6b6d08b1975971ba98
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Maze4
-  - hash:
-      serializedVersion: 2
       Hash: 8b15e35eb98fc258ec2e839df7c3c9b0
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1285,4 +1292,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/varvl/game-3d-15-12/game-3d-15-12 Build/QuizGame.exe
+  playerPath: C:/Users/varvl/Desktop/Game3d/Build/QuizGame.exe

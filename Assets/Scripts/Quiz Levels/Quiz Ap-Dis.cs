@@ -30,11 +30,11 @@ namespace QuizVars{
 		QuizCols scriptInstance2 = null;
 		QuizCols scriptInstance3 = null;	
 		void Update () {
-			GameObject tempObj1 = GameObject.Find("ATM1(Clone)");
+			GameObject tempObj1 = GameObject.Find("ATM1");
 			scriptInstance1 = tempObj1.GetComponent<QuizCols>();
-			GameObject tempObj2 = GameObject.Find("ATM2(Clone)");
+			GameObject tempObj2 = GameObject.Find("ATM2");
 			scriptInstance2 = tempObj2.GetComponent<QuizCols>();
-			GameObject tempObj3 = GameObject.Find("ATM3(Clone)");
+			GameObject tempObj3 = GameObject.Find("ATM3");
 			scriptInstance3 = tempObj3.GetComponent<QuizCols>();
 				
 

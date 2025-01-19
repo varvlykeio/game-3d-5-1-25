@@ -17,7 +17,7 @@ using GameEv;
 // Scene 1  Geometry  Level                 5
 
 
-namespace Scenes{
+/*namespace Scenes{
     public class SceneChanger : MonoBehaviour {
         public Scene Coding;
         bool m_SceneLoaded;
@@ -35,7 +35,7 @@ namespace Scenes{
             SceneManager.UnloadSceneAsync(0);
              
             Debug.Log("IN");    
-        }*/
+        }
 
 
         public void Button1(){
@@ -83,4 +83,4 @@ namespace Scenes{
             events.CursorLock = true;  
         }
     }
-}
+}*/
