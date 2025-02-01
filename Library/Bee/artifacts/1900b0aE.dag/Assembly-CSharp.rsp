@@ -392,6 +392,7 @@
 "Assets/Scripts/Quiz Levels/STARTER ATM.cs"
 "Assets/Scripts/Resolution Scripts/ResolutionScore.cs"
 "Assets/Scripts/Resolution Scripts/SettingsPanel.cs"
+"Assets/Scripts/Resolution Scripts/StartMenu.cs"
 "Assets/Scripts/ScriptableObject/GameEvents.cs"
 "Assets/Scripts/ScriptableObject/Question.cs"
 "Assets/Scripts/Utility/GameUtility.cs"
