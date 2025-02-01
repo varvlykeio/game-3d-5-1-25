@@ -144,13 +144,13 @@ namespace MyVars{
         public void OnApplicationQuit(){       
             events.TotalScore = 0;
             events.currentlevel = 0;
-            events.CursorLock = true;
+            events.CursorLock = false;
             events.QuizStart = false;
             events.rtime = 600;
             events.quizScore = 0;
             events.coinScore = 0;
             events.timerScore = 0;
-            events.isPaused = false;
+            events.isPaused = true;
             events. GameFinished= false;
         }
 

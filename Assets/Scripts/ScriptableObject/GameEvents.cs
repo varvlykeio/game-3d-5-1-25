@@ -41,7 +41,7 @@ namespace GameEv{
         public                  int                                 timerScore                      = 0;
         public                  int                                 TScore                          = 0;  
         public                  float                               timeRemaining                   = 0;  
-        public                  float                               timegravity                     = 0.5f;         
+        public                  float                               timegravity                     = 1f;         
         public                  bool                                isPaused                        = false;
         public                  bool                                QuizActive                      = false; 
         public                  int                                 HighScore                       = 0;
