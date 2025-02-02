@@ -396,6 +396,7 @@
 "Assets/Scripts/ScriptableObject/GameEvents.cs"
 "Assets/Scripts/ScriptableObject/Question.cs"
 "Assets/Scripts/Utility/GameUtility.cs"
+"Assets/TXTReader.cs"
 "Assets/_Barking_Dog/Common Scripts/MouseLook.cs"
 "Assets/_Barking_Dog/Common Scripts/Turn_Move.cs"
 -langversion:9.0

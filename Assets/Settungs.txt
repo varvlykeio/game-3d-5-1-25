@@ -1,0 +1,6 @@
+5  !Time
+20  !TotalScore
+true  !gsd
+30 !sdf
+1 !sdf
+0.3      !efw

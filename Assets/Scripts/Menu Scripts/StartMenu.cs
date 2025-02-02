@@ -21,6 +21,7 @@ public class StartMenu : MonoBehaviour
         MenuCanvas.SetActive(false);
         events.CursorLock = true;
         MainUI.SetActive(true);
+        events.MenuOpen = false; 
     }
 
     public void Settings(){
@@ -30,19 +31,25 @@ public class StartMenu : MonoBehaviour
     public void TeacherSettings(){
         MenuButtons.SetActive(false);
         TeacherSettingButtons.SetActive(true);
+
     }
     public void Back(){
         MenuButtons.SetActive(true);
         SettingButtons.SetActive(false);
         TeacherSettingButtons.SetActive(false);
     }
+    
     public void SaveSettings(){
         
         if (TimeImpact>=0 && TimeImpact<=100){
             events.timegravity = TimeImpact; 
             events.rtime = TTime;
+            events.TotalTime = TTime;
             SettingNotSaved.SetActive(false);
             SettingSaved.SetActive(true);
+            MenuButtons.SetActive(true);
+            SettingButtons.SetActive(false);
+            TeacherSettingButtons.SetActive(false);
         }
         else{
             SettingNotSaved.SetActive(true);
@@ -50,13 +57,20 @@ public class StartMenu : MonoBehaviour
         }
         Debug.Log("Time: " + events.rtime + " Time Impact: " + events.timegravity);
     }
-
     public void ReadTime(string s){
-        TTime = int.Parse(s);
-        Debug.Log("Time: " + TTime);
+        if (!string.IsNullOrEmpty(s)){
+            TTime = int.Parse(s);
+        }
+        //Debug.Log("Time: " + TTime);
     }
+    /*public void ReadTime(string s){
+        TTime = int.Parse(s);
+        //Debug.Log("Time: " + TTime);
+    }*/
     public void ReadTimeImpact( string s){
-        TimeImpact = int.Parse(s);
-        Debug.Log("Time Impact: " + TimeImpact);
+        if (!string.IsNullOrEmpty(s)){
+            TimeImpact = int.Parse(s);
+        }
+        //Debug.Log("Time Impact: " + TimeImpact);
     }
 }

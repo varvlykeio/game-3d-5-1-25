@@ -4,6 +4,9 @@ using Doors;
 using System.Diagnostics;
 using System.Numerics;
 using GameEv;
+using UnityEditor;
+using UnityEngine.UI;
+using TMPro;
 
 
 
@@ -11,6 +14,11 @@ using GameEv;
 namespace MyVars{
     public class MyVarsClass : MonoBehaviour{
         
+        public GameObject SMenu;
+        public GameObject MCanvas;
+        public TMP_InputField TimeImp;
+        public TMP_InputField TTime;
+
         public bool[] Maze = {false,false,false,true};
         public bool Maze1 = false;
         public bool Maze2 = false;
@@ -53,7 +61,8 @@ namespace MyVars{
 
         public void Start(){
                            
-
+            TimeImp.text = events.timegravity.ToString();
+            TTime.text = events.TotalTime.ToString();
             
             if (changelevel == true){
                 UnityEngine.Debug.Log("ping");
@@ -88,6 +97,11 @@ namespace MyVars{
 
         public void Update()
         {
+            if (!events.MenuOpen){
+                SMenu.SetActive(false);
+                MCanvas.SetActive(true);
+            }
+            
             
             
 
@@ -146,12 +160,14 @@ namespace MyVars{
             events.currentlevel = 0;
             events.CursorLock = false;
             events.QuizStart = false;
-            events.rtime = 600;
+            //events.rtime = 600;
+            events.rtime = events.TotalTime;
             events.quizScore = 0;
             events.coinScore = 0;
             events.timerScore = 0;
             events.isPaused = true;
             events. GameFinished= false;
+            events.MenuOpen = true;    
         }
 
        

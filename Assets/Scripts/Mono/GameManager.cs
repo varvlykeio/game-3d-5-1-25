@@ -12,8 +12,7 @@ namespace Gamemanagera{
 
         #region Variables
 
-        private             Data                data                    = new Data();
-
+        private             Data                data                    = new Data();               
         [SerializeField]    GameEvents          events                  = null;
 
         [SerializeField]    Animator            timerAnimtor            = null;
@@ -30,6 +29,7 @@ namespace Gamemanagera{
 
         private             IEnumerator         IE_WaitTillNextRound    = null;
         private             IEnumerator         IE_StartTimer           = null;
+
 
 
         private             bool                IsFinished
@@ -81,6 +81,7 @@ namespace Gamemanagera{
         if (events.QuizStart){
 
 
+
                 
                 events.StartupHighscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
 
@@ -92,7 +93,6 @@ namespace Gamemanagera{
                 UnityEngine.Random.InitState(seed);
                 
                 Display();
-                 
                 events.QuizStart = false;
                 
             }

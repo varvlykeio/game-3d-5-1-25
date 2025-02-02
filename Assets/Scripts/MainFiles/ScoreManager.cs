@@ -17,17 +17,17 @@ public class ScoreManager : MonoBehaviour
      public Text scoreText;
     
     public void Start(){
-        scoreText.text = "Score: " + events.TotalScore.ToString() ;
+        scoreText.text = "Total Score: " + events.TotalScore.ToString() ;
         Debug.Log("KK" + events.TotalScore);
     }
     
     public void Awake(){
-        scoreText.text = "Score: " + events.TotalScore.ToString() ;
+        scoreText.text = "Total Score: " + events.TotalScore.ToString() ;
         Debug.Log("KK" + events.TotalScore);
     }
 
     public void Update(){
-        scoreText.text = "Score: " + events.TotalScore.ToString() ;
+        scoreText.text = "Total Score: " + events.TotalScore.ToString() ;
 
 
     }

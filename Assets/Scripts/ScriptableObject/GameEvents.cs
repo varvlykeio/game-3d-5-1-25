@@ -30,7 +30,7 @@ namespace GameEv{
         public                  int                                 StartupHighscore                = 0;
         public                  int                                 TotalScore                      = 0; 
         public                  int                                 currentlevel                    = 0;    
-        public                  bool                                CursorLock                      = true;
+        public                  bool                                CursorLock                      = false;
         public                  bool                                FirstRun                        = true;
 		public                  bool                                QuizStart                       = false;
         public                  int                                 Difficulty                      = 0;
@@ -46,5 +46,7 @@ namespace GameEv{
         public                  bool                                QuizActive                      = false; 
         public                  int                                 HighScore                       = 0;
         public                  bool                                GameFinished                    = false;
+        public                  bool                                MenuOpen                        = true;
+        public                  float                               TotalTime                       = 0;
     }
 }

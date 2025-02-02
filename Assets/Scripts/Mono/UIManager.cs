@@ -235,6 +235,6 @@ public class UIManager : MonoBehaviour {
     /// </summary>
     void UpdateScoreUI()
     {
-        uIElements.ScoreText.text = "Score: " + events.CurrentFinalScore;
+        uIElements.ScoreText.text = "Quiz Score: " + events.CurrentFinalScore;
     }
 }
