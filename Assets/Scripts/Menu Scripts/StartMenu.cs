@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GameEv;
 using UnityEditor;
+using TextReader;
 public class StartMenu : MonoBehaviour
 {
     public GameObject MenuCanvas;
@@ -13,6 +14,7 @@ public class StartMenu : MonoBehaviour
     public GameObject SettingNotSaved;
     public GameObject SettingSaved;
     public GameEvents events;
+    public TXTReader Text;
     public int TTime;
     public int TimeImpact;
 
@@ -44,6 +46,8 @@ public class StartMenu : MonoBehaviour
         if (TimeImpact>=0 && TimeImpact<=100){
             events.timegravity = TimeImpact; 
             events.rtime = TTime;
+            Text.VarList[0] = TTime.ToString();
+            Debug.Log(Text.VarList[0]);
             events.TotalTime = TTime;
             SettingNotSaved.SetActive(false);
             SettingSaved.SetActive(true);
