@@ -13,63 +13,58 @@ namespace TextReader{
         public GameEvents events;
 
         // Start is called before the first frame update
-        void DeSynthesiseList(string lines, out string comments, out string values){
-            
-            
-            
-                string[] split = lines.Split('!');
-                values = split[0];
-                comments = split[1];
-                
-            
-            
-        }
-        public string[] VarList = new string[25];
-        public string[] ComList = new string[25];
-        
+
+        public List<string> VarList = new List<string>();
+        public List<string> ComList = new List<string>();
         void Start(){
-            string[] CompleteList = file.text.Split('\n');
+            List<string> CompleteList = new List<string>(file.text.Split('\n'));
             string comments;
             string values;
-            
-            for(int i = 0; i < CompleteList.Length; i++){
-            DeSynthesiseList(CompleteList[i], out comments, out values);
-            //Debug.Log(comments + " ! " + values);
-            VarList[i] = values;
-            ComList[i] = comments;
+            VarList.Clear(); // Clear the list before adding new values because for some fucking reason
+            ComList.Clear(); // the list is initialized with 25 empty strings
+            foreach (string line in CompleteList)
+            {
+                DeSynthesiseList(line, out comments, out values);
+                VarList.Add(values);
+                ComList.Add(comments);
             }
             SendValues(VarList);
            
-            
+          
             
         }
 
-        string[] SynthesizeList(string[] comments, string[] values){
-            string[] CompleteList = new string[comments.Length];
-            for (int i = 0; i < comments.Length; i++)
+        List<string> SynthesizeList(List<string> comments,List<string> values){
+            List<string> CompleteList = new List<string>();
+            for (int i = 0; i < comments.Count; i++)
             {
-                CompleteList[i] =  values[i]+ " ! " + comments[i];
+                CompleteList.Add(values[i] + "!" + comments[i]);
             }
             return CompleteList;
                 
         }
 
-
-
-        
-
-        void SendValues(string[] VarList){
-        
-            events.rtime = float.Parse(VarList[0]);
-
+        void DeSynthesiseList(string lines, out string comments, out string values){ 
+            string[] split = lines.Split('!');
+            values = split[0];
+            comments = split[1].Replace("\r", "").Replace("\n", "");
         }
-        
+
+        void SendValues(List<string> VarList){    
+            if (float.TryParse(VarList[0], out float rtime))
+            {
+                events.rtime = rtime;
+            }
+            else
+            {
+                Debug.LogError($"Failed to parse '{VarList[0]}' as float.");
+            }
+        }
         
         void OnApplicationQuit(){
-            string[] CompleteList = SynthesizeList(ComList, VarList);
-            File.WriteAllLines("Assets/Settungs.txt", CompleteList);
+           List<string> CompleteList = SynthesizeList(ComList, VarList);
+           File.WriteAllText("Assets/Settungs.txt", string.Join("\n", CompleteList).TrimEnd('\n'));
         }
-
     }
 }
 

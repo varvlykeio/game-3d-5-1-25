@@ -48,5 +48,6 @@ namespace GameEv{
         public                  bool                                GameFinished                    = false;
         public                  bool                                MenuOpen                        = true;
         public                  float                               TotalTime                       = 0;
+        public                  int                                 VarListLenght                   = 25;
     }
 }
