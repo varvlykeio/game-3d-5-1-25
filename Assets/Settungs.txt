@@ -1,2 +1,2 @@
-400! frickery
-500 ! rtime
+400!rtime
+1!timegravity

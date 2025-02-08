@@ -20,8 +20,9 @@ namespace TextReader{
             List<string> CompleteList = new List<string>(file.text.Split('\n'));
             string comments;
             string values;
-            VarList.Clear(); // Clear the list before adding new values because for some fucking reason
-            ComList.Clear(); // the list is initialized with 25 empty strings
+            VarList.Clear(); // This was needed because before it was adding 25 empty strings to the list
+            ComList.Clear(); // Turns out, for some reason, it was a set value in the unity editor.... 
+            // Now it is cleared as a security measure
             foreach (string line in CompleteList)
             {
                 DeSynthesiseList(line, out comments, out values);
@@ -38,7 +39,7 @@ namespace TextReader{
             List<string> CompleteList = new List<string>();
             for (int i = 0; i < comments.Count; i++)
             {
-                CompleteList.Add(values[i] + "!" + comments[i]);
+                CompleteList.Add(values[i] + " ! " + comments[i]);
             }
             return CompleteList;
                 
@@ -46,18 +47,17 @@ namespace TextReader{
 
         void DeSynthesiseList(string lines, out string comments, out string values){ 
             string[] split = lines.Split('!');
-            values = split[0];
-            comments = split[1].Replace("\r", "").Replace("\n", "");
+            values = split[0].Replace(" " , "");
+            comments = split[1].Replace("\r", "").Replace("\n", "").Replace(" " , "");
         }
 
         void SendValues(List<string> VarList){    
-            if (float.TryParse(VarList[0], out float rtime))
+            
+            for (int i = 0; i < VarList.Count; i++)
             {
-                events.rtime = rtime;
-            }
-            else
-            {
-                Debug.LogError($"Failed to parse '{VarList[0]}' as float.");
+                string variableName = ComList[i];
+                float value = float.Parse(VarList[i]);
+                typeof(GameEvents).GetField(variableName).SetValue(events, value);
             }
         }
         
