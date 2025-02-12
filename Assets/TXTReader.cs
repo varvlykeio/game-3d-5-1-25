@@ -4,6 +4,7 @@ using System.IO;
 using JetBrains.Annotations;
 using UnityEngine;
 using GameEv;
+using Unity.VisualScripting;
 
 namespace TextReader{
 
@@ -16,6 +17,7 @@ namespace TextReader{
 
         public List<string> VarList = new List<string>();
         public List<string> ComList = new List<string>();
+
         void Start(){
             List<string> CompleteList = new List<string>(file.text.Split('\n'));
             string comments;
@@ -56,7 +58,10 @@ namespace TextReader{
             for (int i = 0; i < VarList.Count; i++)
             {
                 string variableName = ComList[i];
-                float value = float.Parse(VarList[i]);
+                var fieldType = typeof(GameEvents).GetField(variableName).FieldType;
+                Debug.Log(fieldType);
+                object value = System.Convert.ChangeType(VarList[i], fieldType);
+                value = VarList[i];
                 typeof(GameEvents).GetField(variableName).SetValue(events, value);
             }
         }

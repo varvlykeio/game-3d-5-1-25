@@ -1,2 +1,7 @@
-400!rtime
-1!timegravity
+400 ! rtime
+1 ! timegravity
+0 ! TotalScore
+0 ! currentlevel
+0 ! quizScore
+0 ! coinScore
+0 ! timerScore
