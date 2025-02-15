@@ -37037,7 +37037,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1950905908}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: Settings
+        m_MethodName: SwitchToSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -39477,7 +39477,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1950905908}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: TeacherSettings
+        m_MethodName: SwitchToTeacherSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52896,7 +52896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000045776367}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &1613922417
@@ -53727,7 +53727,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1950905908}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: Back
+        m_MethodName: SwitchToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -61001,7 +61001,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1950905908}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: Back
+        m_MethodName: SwitchToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -67379,6 +67379,7 @@ SceneRoots:
   - {fileID: 81599597}
   - {fileID: 947666167}
   - {fileID: 1587462813}
+  - {fileID: 1717329488}
   - {fileID: 1315641811}
   - {fileID: 885597977}
   - {fileID: 166315688}
@@ -67395,7 +67396,6 @@ SceneRoots:
   - {fileID: 1372511187673980346}
   - {fileID: 611948727}
   - {fileID: 503438247}
-  - {fileID: 1717329488}
   - {fileID: 342997825}
   - {fileID: 923509181}
   - {fileID: 206608606}
