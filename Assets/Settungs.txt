@@ -1,4 +1,4 @@
-400 ! rtime
+500 ! rtime
 1 ! timegravity
 0 ! TotalScore
 0 ! currentlevel

@@ -7,7 +7,7 @@ using UnityEditor;
 using JetBrains.Annotations;
 using UnityEngine.UI;
 using Unity.VisualScripting;
-using MyVars;
+using CC;
 
 
 public class Maze1 : MonoBehaviour

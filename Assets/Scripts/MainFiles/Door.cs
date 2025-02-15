@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using MyVars;
+using CC;
 using OWDoor;
 using UnityEditor;
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using MyVars;
+using CC;
 using System.Data.Common;
 using JetBrains.Annotations;
 using System;

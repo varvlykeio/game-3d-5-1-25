@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using MyVars;
+using CC;
 using GameEv;
 
 

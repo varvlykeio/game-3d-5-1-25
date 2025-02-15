@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MyVars;
+using CC;
 using UnityEngine.UI;
 using GameEv;
 
@@ -9,12 +9,12 @@ using GameEv;
 namespace CoinsNS{
     public class Coin : MonoBehaviour{  
 
-        MyVarsClass coins = null;
+        ControlCenter coins = null;
         [SerializeField]    GameEvents          events                  = null;
 
         public void OnTriggerEnter(){
             GameObject tempObj = GameObject.Find("Control Center");
-            coins = tempObj.GetComponent<MyVarsClass>();
+            coins = tempObj.GetComponent<ControlCenter>();
             events.TotalScore += 20;
             events.coinScore += 20;
             Destroy(gameObject);

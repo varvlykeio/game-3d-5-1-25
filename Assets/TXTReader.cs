@@ -7,7 +7,6 @@ using GameEv;
 using Unity.VisualScripting;
 
 namespace TextReader{
-
     public class TXTReader : MonoBehaviour{
 
         [SerializeField] TextAsset file;
@@ -82,10 +81,6 @@ namespace TextReader{
                     typeof(GameEvents).GetField(variableName).SetValue(events, bool.Parse(VarList[i]));
                 }
             }
-        }
-        
-        
+        }       
     }
 }
-
-

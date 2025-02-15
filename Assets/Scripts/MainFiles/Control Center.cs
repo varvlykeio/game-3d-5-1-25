@@ -11,8 +11,8 @@ using TMPro;
 
 
 
-namespace MyVars{
-    public class MyVarsClass : MonoBehaviour{
+namespace CC{
+    public class ControlCenter : MonoBehaviour{
         
         public GameObject SMenu;
         public GameObject MCanvas;

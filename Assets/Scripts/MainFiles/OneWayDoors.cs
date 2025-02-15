@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using MyVars;
+using CC;
 
 namespace OWDoor {
     public class OWDoors : MonoBehaviour

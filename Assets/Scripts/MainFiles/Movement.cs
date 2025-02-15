@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MyVars;
+using CC;
 using System.Net;
 
 public class Movement : MonoBehaviour{
@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour{
 
   public static int a;
 
-  MyVarsClass scriptInstance = null;
+  ControlCenter scriptInstance = null;
   public GameObject Cam;
   public int level;
 
@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour{
   void Update(){
 
     GameObject tempObj1 = GameObject.Find("Control Center");
-    scriptInstance = tempObj1.GetComponent<MyVarsClass>();
+    scriptInstance = tempObj1.GetComponent<ControlCenter>();
 
     // Access the variable from MyClass       
     levelcheck1 = scriptInstance.Maze1;

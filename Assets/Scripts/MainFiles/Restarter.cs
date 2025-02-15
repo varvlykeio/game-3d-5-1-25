@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 using System;
 using QuizCol;
 using System.Numerics;
-using MyVars;
+using CC;
 using UnityEditor;
 using Gamemanagera;
 
