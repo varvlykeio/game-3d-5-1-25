@@ -82,4 +82,26 @@
       <AddScore>33</AddScore>
     </Question>
   </Questions>
+  <Question>
+      <Info>ερωτηση3</Info>
+      <Answers>
+        <Answer>
+          <Info>Κωστας</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Σακης</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Αρης</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>26</Timer>
+      <Type>Multi</Type>
+      <AddScore>30</AddScore>
+    </Question>
+  </Questions>
 </Data>

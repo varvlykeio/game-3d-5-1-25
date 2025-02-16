@@ -29,6 +29,8 @@ namespace Gamemanagera{
 
         private             IEnumerator         IE_WaitTillNextRound    = null;
         private             IEnumerator         IE_StartTimer           = null;
+        public             GameObject          Content;
+        public             GameObject          ResolutionCanvas;
 
 
 
@@ -82,7 +84,7 @@ namespace Gamemanagera{
 
 
 
-                
+                //Content.SetActive(true);
                 events.StartupHighscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
 
                 timerDefaultColor =  Color.white;
@@ -93,6 +95,7 @@ namespace Gamemanagera{
                 UnityEngine.Random.InitState(seed);
                 
                 Display();
+                
                 events.QuizStart = false;
                 
             }
@@ -304,7 +307,8 @@ namespace Gamemanagera{
             events.QuizActive = false;
             //If next level is the first level, meaning that we start playing a game again, reset the final score.
             if (events.level == 1) { events.CurrentFinalScore = 0; }
-            
+            //Content.SetActive(false);
+            //ResolutionCanvas.SetActive(false);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         /// <summary>

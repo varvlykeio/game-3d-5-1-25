@@ -18,7 +18,8 @@ public class StartMenu : MonoBehaviour
     public GameEvents events;
     public TXTReader Text;
     public int TTime;
-    public int TimeImpact;    
+    public int TimeImpact;  
+    public int CoinScore;  
     int p;
     int p2;
 
@@ -40,6 +41,7 @@ public class StartMenu : MonoBehaviour
             Debug.Log(Text.VarList[0]);
 
             SendValue("TotalTime","rtime", TTime);
+            SendValue("CoinImportance", CoinScore);
             StartCoroutine(SaveIcon());
             SwitchToMainMenu();
         }
@@ -58,6 +60,11 @@ public class StartMenu : MonoBehaviour
     public void ReadTimeImpact( string s){
         if (!string.IsNullOrEmpty(s)){
             TimeImpact = int.Parse(s);
+        }
+    }
+    public void ReadCoinScore( string s){
+        if (!string.IsNullOrEmpty(s)){
+            CoinScore = int.Parse(s);
         }
     }
 

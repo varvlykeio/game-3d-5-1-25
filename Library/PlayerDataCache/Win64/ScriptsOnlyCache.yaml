@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AnswerData
     - AudioManager
+    - CC.ControlCenter
     - CoinsNS.Coin
     - Doors.Door
     - FirstPersonController
@@ -10,7 +11,6 @@ ScriptsOnlyBuild:
     - Gamemanagera.GameManager
     - Maze1
     - MazeMenu
-    - MyVars.MyVarsClass
     - OWDoor.OWDoors
     - QuizCol.QuizCols
     - QuizVars.Quiz
@@ -19,6 +19,7 @@ ScriptsOnlyBuild:
     - SettingsPanel
     - StartMenu
     - Teleporter
+    - TextReader.TXTReader
     - Timer
     - Turn_Move
     - UIManager
@@ -130,7 +131,7 @@ ScriptsOnlyBuild:
     methodName: SaveSettings
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
-    methodName: Settings
+    methodName: SwitchToSettings
   - assembly: Assembly-CSharp
     fullTypeName: Maze1
     methodName: MazeStart
@@ -139,7 +140,7 @@ ScriptsOnlyBuild:
     methodName: GameEnd
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
-    methodName: TeacherSettings
+    methodName: SwitchToTeacherSettings
   - assembly: Assembly-CSharp
     fullTypeName: Gamemanagera.GameManager
     methodName: CursorLockOnQuizEnd
@@ -148,13 +149,13 @@ ScriptsOnlyBuild:
     methodName: ReadTime
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
-    methodName: Back
+    methodName: SwitchToMainMenu
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
     methodName: ReadTimeImpact
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
-    methodName: Back
+    methodName: SwitchToMainMenu
   - assembly: Assembly-CSharp
     fullTypeName: Teleporter
     methodName: Affirmative
@@ -284,6 +285,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8274}
     - Class: 114
       Script: {instanceID: 8278}
+    - Class: 114
+      Script: {instanceID: 8282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -449,7 +452,7 @@ ScriptsOnlyBuild:
     className: Movement
   - hash:
       serializedVersion: 2
-      Hash: a3b45eefd60d2b7f1d5203a01abfafff
+      Hash: 76ac51a35817db40ada430eedb7d7994
     assemblyName: Assembly-CSharp
     namespaceName: GameEv
     className: GameEvents
@@ -617,10 +620,10 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c5a075707ee9b470a6951ba793556ea8
+      Hash: d5430f363c5f6d46fcf53ee8d172818a
     assemblyName: Assembly-CSharp
-    namespaceName: MyVars
-    className: MyVarsClass
+    namespaceName: CC
+    className: ControlCenter
   - hash:
       serializedVersion: 2
       Hash: d41ab9b5ea92474f9c0a6937a0607ce1
@@ -1355,7 +1358,13 @@ ScriptsOnlyBuild:
     className: Teleporter
   - hash:
       serializedVersion: 2
-      Hash: e7730e7176140d195f826b1674175f9e
+      Hash: b6b9cc4cfc6427ec2a3e507ab439143f
+    assemblyName: Assembly-CSharp
+    namespaceName: TextReader
+    className: TXTReader
+  - hash:
+      serializedVersion: 2
+      Hash: 498c28d1a108d7f3cbd17993a1205852
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: StartMenu

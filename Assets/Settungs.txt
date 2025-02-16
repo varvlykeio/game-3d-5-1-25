@@ -1,5 +1,6 @@
 500 ! TotalTime
 1 ! timegravity
+5 ! CoinImportance
 0 ! TotalScore
 0 ! currentlevel
 0 ! quizScore

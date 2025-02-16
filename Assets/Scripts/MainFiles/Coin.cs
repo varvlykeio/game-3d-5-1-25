@@ -15,8 +15,8 @@ namespace CoinsNS{
         public void OnTriggerEnter(){
             GameObject tempObj = GameObject.Find("Control Center");
             coins = tempObj.GetComponent<ControlCenter>();
-            events.TotalScore += 20;
-            events.coinScore += 20;
+            events.TotalScore += events.CoinImportance;
+            events.coinScore += events.CoinImportance;
             Destroy(gameObject);
         
             

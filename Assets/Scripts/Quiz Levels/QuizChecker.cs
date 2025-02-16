@@ -6,6 +6,9 @@ using System.Data.Common;
 using JetBrains.Annotations;
 using System;
 using GameEv;
+using UnityEditor.UI;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 
 
 namespace QuizCol {
@@ -14,9 +17,10 @@ namespace QuizCol {
 
        private bool activate;
         public bool pusher;
-           [SerializeField]    GameEvents          events                  = null;
-           [SerializeField]    int          level;
-           [SerializeField]    int          dif;
+        [SerializeField]    GameEvents          events                  = null;
+        [SerializeField]    int          level;
+        [SerializeField]    int          dif;
+        private UiAppear component;
          public void OnTriggerEnter(){
             
             activate = true;
@@ -34,10 +38,12 @@ namespace QuizCol {
                     events.Difficulty = dif;
                     //events.currentlevel = level;
                     events.QuizActive = true;
-
+                    Destroy(GetComponent("UiAppear"));
+                    // AddComponentMenu
                 }
             }
         }
+        
 
         public void OnTriggerExit(){
             

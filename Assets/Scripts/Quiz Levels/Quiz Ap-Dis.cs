@@ -42,7 +42,6 @@ namespace QuizVars{
 			levelcheck2 = scriptInstance2.pusher;
 			levelcheck3 = scriptInstance3.pusher;
 
-
 	
 			if (levelcheck1 == true || levelcheck2 == true || levelcheck3 == true) {
 

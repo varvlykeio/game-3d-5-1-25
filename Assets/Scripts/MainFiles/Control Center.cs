@@ -38,7 +38,7 @@ namespace CC{
 
                                 // CoinR[level , x/y/z....]                    v-int-v
                                 //     x1  ,   x2  ,    y   ,   z1  ,  z2  ,   ammount 
-        public float[,] CoinR =  { {  -241.3f  ,  -235.7f  ,  0.5f  ,  44.3f  , 49.54f  ,     5     },    //Level 0
+        public float[,] CoinR =  { {  -202f  ,  -228f  ,  0.5f  ,  63f  , 10f  ,     10     },    //Level 0
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     2     },    //Level 1 -   Math      }
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     0     },    //Level 2 -  Coding     |
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     0     },    //Level 3 - History     |  Coordinates to 
