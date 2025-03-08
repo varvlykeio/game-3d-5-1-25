@@ -8,6 +8,8 @@ public class MazeMenu : MonoBehaviour
     public GameObject Menu;
     public GameEvents events;
     public bool appear = false;
+    public GameObject ATM;
+
 
 
     void Start()
@@ -16,7 +18,7 @@ public class MazeMenu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)&&  events.triggered== true)
         {
             if (appear)
             {

@@ -49,5 +49,6 @@ namespace GameEv{
         public                  bool                                MenuOpen                        = true;
         public                  float                               TotalTime                       = 0;
         public                  int                                 CoinImportance                  = 25;
+        public                  bool                                triggered                       = false;
     }
 }
