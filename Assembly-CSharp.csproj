@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\MainFiles\Player_Coin.cs" />
     <Compile Include="Assets\Scripts\Quiz Levels\QuizChecker.cs" />
     <Compile Include="Assets\Scripts\Maze Levels\Maze.cs" />
+    <Compile Include="Assets\Scripts\MainFiles\ATMPressTrigger.cs" />
     <Compile Include="Assets\Scripts\Quiz Levels\QuizChecker3.cs" />
     <Compile Include="Assets\Scripts\ScriptableObject\Question.cs" />
     <Compile Include="Assets\Scripts\Quiz Levels\QuizChecker2.cs" />

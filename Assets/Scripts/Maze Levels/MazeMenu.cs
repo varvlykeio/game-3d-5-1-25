@@ -8,9 +8,6 @@ public class MazeMenu : MonoBehaviour
     public GameObject Menu;
     public GameEvents events;
     public bool appear = false;
-    public GameObject ATM;
-
-
 
     void Start()
     {

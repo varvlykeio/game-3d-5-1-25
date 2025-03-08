@@ -363,6 +363,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/FirstPersonController/FirstPersonController.cs"
+"Assets/Scripts/MainFiles/ATMPressTrigger.cs"
 "Assets/Scripts/MainFiles/Coin.cs"
 "Assets/Scripts/MainFiles/Control Center.cs"
 "Assets/Scripts/MainFiles/Door.cs"

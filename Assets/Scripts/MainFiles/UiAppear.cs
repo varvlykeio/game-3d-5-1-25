@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using GameEv;
 //using TMPro;
 
 //εμφανιση του i στον ΑΤΜ 
@@ -11,9 +10,7 @@ using GameEv;
     public class UiAppear : MonoBehaviour
     {
         //[SerializeField] private TMP_Text customText;
-        public GameObject customText;
-        public GameEvents events;
-        
+        public GameObject customText;        
 
         public void Start(){
         customText.SetActive(false);
@@ -24,7 +21,6 @@ using GameEv;
             if (other.CompareTag("Player"))
             {
                 customText.SetActive(true);
-                events.triggered = true;
             }  
         }
 
@@ -44,7 +40,6 @@ using GameEv;
             if (other.CompareTag("Player"))
             {
                 customText.SetActive(false);
-                events.triggered = false;
             }
         }
     }
