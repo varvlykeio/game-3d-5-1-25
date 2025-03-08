@@ -18,12 +18,10 @@ public class ScoreManager : MonoBehaviour
     
     public void Start(){
         scoreText.text = "Total Score: " + events.TotalScore.ToString() ;
-        Debug.Log("KK" + events.TotalScore);
     }
     
     public void Awake(){
         scoreText.text = "Total Score: " + events.TotalScore.ToString() ;
-        Debug.Log("KK" + events.TotalScore);
     }
 
     public void Update(){

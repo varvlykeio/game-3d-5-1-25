@@ -89,7 +89,6 @@ namespace CC{
 
                 levelch = level;
                 changelevel = true;
-                UnityEngine.Debug.Log("Start " + levelch + " " + changelevel + " " + level);
             }
 
 
