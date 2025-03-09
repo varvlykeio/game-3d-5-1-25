@@ -16,16 +16,16 @@ public class Maze1 : MonoBehaviour
 	public GameObject ATMPrmoufa;
 									  // MazePos[level , x/y/z....]                    v-int-v
                                   //   x,    y   ,   z  
-	public float[,] MazePos =  {   {  -240f  ,  1.5f  ,  44.3f  },    
-                                   {  -245f   ,   1.5f    ,    44.3f    },    
-                                   {  -250f   ,   1.5f    ,    44.3f    },  
-                                   {  -255f  ,   1.5f    ,    44.3f    },   
-                                   {   0   ,   0    ,   0    },   
-                                   {   0   ,   0    ,   0    },
-								   {   0   ,   0    ,   0    },
-								   {   0   ,   0    ,   0    },
-								   {   0   ,   0    ,   0    },
-								   {   0   ,   0    ,   0    }, };
+	public float[,] MazePos =  {   {  -237.4f      ,  -4.625f  ,  -52.60674f  },    
+                                   {  -187.1933f   ,  -4.625f  ,  -66.2f      },    
+                                   {  -167.6068f   ,  -4.625f  ,  -50.4f      },  
+                                   {  -141.4f      ,  -4.625f  ,  -46.60674f  },   
+                                   {  -137.6068f   ,  -4.625f  ,  -32.4f      },   
+                                   {  -203.7f      ,  -4.625f  ,  -46.706f    },
+								   {  -203.7067f   ,  -4.625f  ,  -35.4f      },
+								   {  -187.1933f   ,  -4.625f  ,  -29.4f      },
+								   {  -215.7067f   ,  -4.625f  ,  -20.4f      },
+								   {  -160.1933f   ,  -4.625f  ,  -17.4f      }, };
 	int ATM;
 
 	public GameObject[] ATMSPR= {null,null,null};	

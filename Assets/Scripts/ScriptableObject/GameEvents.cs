@@ -52,5 +52,6 @@ namespace GameEv{
         public                  bool                                triggered                       = false;
         public                  bool                                teleport                        = false;
         public                  Vector3                             playerposition                  = new Vector3(0,0,0);
+        public                  bool                                Maze                            = false;
     }
 }

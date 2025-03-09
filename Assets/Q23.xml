@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Questions>
+    <Question>
+      <Info>Οι μεταβλητές στη ΓΛΩΣΣΑ μπορεί να δηλωθούν ως:</Info>
+      <Answers>
+        <Answer>
+          <Info>ΑΚΕΡΑΙΕΣ</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΠΡΑΓΜΑΤΙΚΕΣ</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΣΤΟΙΒΕΣ</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΛΟΓΙΚΕΣ</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΛΙΣΤΕΣ</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΧΑΡΑΚΤΗΡΕΣ</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>30</Timer>
+      <Type>Multi</Type>
+      <AddScore>30</AddScore>
+    </Question>
+    <Question>
+      <Info>To όνομα μεταβλητής 23α είναι αποδεχτό στην ΓΛΩΣΣΑ</Info>
+      <Answers>
+        <Answer>
+          <Info>Σωστό</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Λάθος</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>23</Timer>
+      <Type>Single</Type>
+      <AddScore>22</AddScore>
+    </Question>
+    <Question>
+      <Info>To σώμα εντολών που περιλαμβάνεται στην επαναληψη ΟΣΟ</Info>
+      <Answers>
+        <Answer>
+          <Info>εκτελείται τουλάχιστον μία φορά</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>μπορεί να μην εκτελεστεί καμία φορά</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>εκτελείται πάντα τόσες φορές όσο και το βήμα</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>30</Timer>
+      <Type>Single</Type>
+      <AddScore>22</AddScore>
+    </Question>
+    <Question>
+      <Info>Μετά την εκτέλεση της εντολής y&lt;-10 DIV 9 - 10 MOD 9  </Info>
+      <Answers>
+        <Answer>
+          <Info>2</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>1</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>0</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>23</Timer>
+      <Type>Single</Type>
+      <AddScore>22</AddScore>
+    </Question>
+  </Questions>      
+</Data>

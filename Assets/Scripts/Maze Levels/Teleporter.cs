@@ -17,8 +17,9 @@ public class Teleporter : MonoBehaviour
     }
 
     public void Affirmative(){
-        Player.transform.position = new Vector3(-250, 0.2f, -78);
+        Player.transform.position = new Vector3(-238, -4f, -36);
         Canvas.SetActive(false);
         events.CursorLock = true;
+        events.Maze = true;
     }
 }

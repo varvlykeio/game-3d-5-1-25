@@ -39,6 +39,7 @@ namespace QuizCol {
                     events.CursorLock = false;
                     events.QuizStart = true;
                     events.Difficulty = dif;
+                    events.level = level;
                     //events.currentlevel = level;
                     events.QuizActive = true;
                     Destroy(GetComponent("UiAppear"));

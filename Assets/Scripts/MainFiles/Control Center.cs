@@ -171,7 +171,8 @@ namespace CC{
             events.timerScore = 0;
             events.isPaused = true;
             events. GameFinished= false;
-            events.MenuOpen = true;    
+            events.MenuOpen = true;  
+            events.Maze = false;  
         }
 
        
