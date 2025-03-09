@@ -20,11 +20,14 @@ namespace QuizCol {
         [SerializeField]    GameEvents          events                  = null;
         [SerializeField]    int          level;
         [SerializeField]    int          dif;
+        [SerializeField]    bool         mazequiz;
         private UiAppear component;
          public void OnTriggerEnter(){
             
             activate = true;
-
+            if (mazequiz == true){
+                events.teleport = true;
+            }
         }
 
         public void Update(){
@@ -48,6 +51,9 @@ namespace QuizCol {
         public void OnTriggerExit(){
             
             activate = false;
+            if (mazequiz == true){
+                events.teleport = true;
+            }
             
         }
         

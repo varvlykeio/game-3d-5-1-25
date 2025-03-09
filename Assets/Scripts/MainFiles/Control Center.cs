@@ -16,6 +16,7 @@ namespace CC{
         
         public GameObject SMenu;
         public GameObject MCanvas;
+        public GameObject Player;
         public TMP_InputField TimeImp;
         public TMP_InputField TTime;
 
@@ -152,6 +153,10 @@ namespace CC{
             UnityEngine.Quaternion CoinQ = new UnityEngine.Quaternion(0,0,0,0);
             Instantiate(coin, randCoinPos, CoinQ);
 
+        }
+
+        public void TransportPlayer(){
+            Player.transform.position = events.playerposition;
         }
 
         public void OnApplicationQuit(){       

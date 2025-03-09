@@ -50,5 +50,7 @@ namespace GameEv{
         public                  float                               TotalTime                       = 0;
         public                  int                                 CoinImportance                  = 25;
         public                  bool                                triggered                       = false;
+        public                  bool                                teleport                        = false;
+        public                  Vector3                             playerposition                  = new Vector3(0,0,0);
     }
 }

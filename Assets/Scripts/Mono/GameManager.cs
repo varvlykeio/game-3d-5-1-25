@@ -29,8 +29,9 @@ namespace Gamemanagera{
 
         private             IEnumerator         IE_WaitTillNextRound    = null;
         private             IEnumerator         IE_StartTimer           = null;
-        public             GameObject          Content;
-        public             GameObject          ResolutionCanvas;
+        public              GameObject          Content;
+        public              GameObject          ResolutionCanvas;
+        public              GameObject          Player;
 
 
 
@@ -81,7 +82,9 @@ namespace Gamemanagera{
         private void Update()
         {
         if (events.QuizStart){
-
+                if (events.teleport){
+                    events.playerposition = Player.transform.position; 
+                }
 
 
                 //Content.SetActive(true);
