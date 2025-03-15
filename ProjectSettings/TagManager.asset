@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - SDL
+  - MazeMoufa
+  - MazeQuiz1
+  - MazeQuiz2
+  - MazeQuiz3
   layers:
   - Default
   - TransparentFX

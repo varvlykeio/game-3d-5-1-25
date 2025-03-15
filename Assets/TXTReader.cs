@@ -18,7 +18,6 @@ namespace TextReader{
             List<string> CompleteList = new List<string>(file.text.Split('\n'));
             string comments;
             string values;
-            Debug.Log("Pass");
             VarList.Clear(); // This was needed because before it was adding 25 empty strings to the list
             ComList.Clear(); // Turns out, for some reason, it was a set value in the unity editor.... 
             // Now it is cleared as a security measure

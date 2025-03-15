@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64000013538627956}
   m_Layer: 0
   m_Name: MazeMoufa
-  m_TagString: Untagged
+  m_TagString: MazeMoufa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ce03f7408cf481d4dbca58fd123080fc, type: 2}
+  - {fileID: 2100000, guid: d3f139023cb4911499b7c10a0929e591, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5225216457176760149}
   m_Layer: 0
   m_Name: MazeQuiz1
-  m_TagString: Untagged
+  m_TagString: MazeQuiz1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

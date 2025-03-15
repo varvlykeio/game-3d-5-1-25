@@ -17,6 +17,7 @@ namespace QuizCol {
 
        private bool activate;
         public bool pusher;
+        //public GameObject wall;
         [SerializeField]    GameEvents          events                  = null;
         [SerializeField]    int          level;
         [SerializeField]    int          dif;
@@ -40,6 +41,7 @@ namespace QuizCol {
                     events.QuizStart = true;
                     events.Difficulty = dif;
                     events.level = level;
+                    //wall.SetActive(true);
                     //events.currentlevel = level;
                     events.QuizActive = true;
                     Destroy(GetComponent("UiAppear"));

@@ -64,6 +64,10 @@ namespace CC{
                            
             TimeImp.text = events.timegravity.ToString();
             TTime.text = events.TotalTime.ToString();
+            if (events.pendingtransport == true){
+                Player.transform.position = events.playerposition;
+                events.pendingtransport = false;
+            }
             
             if (changelevel == true){
                 UnityEngine.Debug.Log("ping");
@@ -156,7 +160,7 @@ namespace CC{
         }
 
         public void TransportPlayer(){
-            Player.transform.position = events.playerposition;
+            events.pendingtransport = true;
         }
 
         public void OnApplicationQuit(){       

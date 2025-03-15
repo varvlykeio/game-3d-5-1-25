@@ -81,8 +81,7 @@
       <Type>Multi</Type>
       <AddScore>33</AddScore>
     </Question>
-  </Questions>
-  <Question>
+    <Question>
       <Info>ερωτηση3</Info>
       <Answers>
         <Answer>

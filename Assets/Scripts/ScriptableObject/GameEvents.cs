@@ -53,5 +53,7 @@ namespace GameEv{
         public                  bool                                teleport                        = false;
         public                  Vector3                             playerposition                  = new Vector3(0,0,0);
         public                  bool                                Maze                            = false;
+        public                  bool                                pendingtransport                = false;
+        public                  bool                                pendingspawn                    = false;
     }
 }

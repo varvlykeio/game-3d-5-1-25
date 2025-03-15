@@ -8,25 +8,32 @@ using JetBrains.Annotations;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using CC;
+using UnityEditor.PackageManager;
+using GameEv;
 
 
 public class Maze1 : MonoBehaviour
 
 {
 	public GameObject ATMPrmoufa;
-									  // MazePos[level , x/y/z....]                    v-int-v
-                                  //   x,    y   ,   z  
-	public float[,] MazePos =  {   {  -237.4f      ,  -4.625f  ,  -52.60674f  },    
-                                   {  -187.1933f   ,  -4.625f  ,  -66.2f      },    
-                                   {  -167.6068f   ,  -4.625f  ,  -50.4f      },  
-                                   {  -141.4f      ,  -4.625f  ,  -46.60674f  },   
-                                   {  -137.6068f   ,  -4.625f  ,  -32.4f      },   
-                                   {  -203.7f      ,  -4.625f  ,  -46.706f    },
-								   {  -203.7067f   ,  -4.625f  ,  -35.4f      },
-								   {  -187.1933f   ,  -4.625f  ,  -29.4f      },
-								   {  -215.7067f   ,  -4.625f  ,  -20.4f      },
-								   {  -160.1933f   ,  -4.625f  ,  -17.4f      }, };
-	int ATM;
+									  // MazePos[ No. , x/y/z....]                    v-int-v
+                                   //      x       ,     y     ,       z     , RotationY
+	public float[,] MazePos =  {   {  -237.4f      ,  -4.625f  ,  -52.60674f , 180},    
+                                   {  -187.1933f   ,  -4.625f  ,  -66.2f     ,  90},    
+                                   {  -167.6068f   ,  -4.625f  ,  -50.4f     , -90},  
+                                   {  -141.4f      ,  -4.625f  ,  -46.60674f , 180},   
+                                   {  -137.6068f   ,  -4.625f  ,  -32.4f     , -90},   
+                                   {  -203.7f      ,  -4.625f  ,  -46.706f   , 180},
+								   {  -203.7067f   ,  -4.625f  ,  -35.4f     , -90},
+								   {  -187.1933f   ,  -4.625f  ,  -29.4f     ,  90},
+								   {  -215.7067f   ,  -4.625f  ,  -20.4f     , -90},
+								   {  -160.1933f   ,  -4.625f  ,  -17.4f     ,  90}, };
+	int ATM;    
+	List<Quaternion> MoufaQuartList = new List<Quaternion>();
+    List<Vector3> MoufaPosList = new List<Vector3>();
+    Vector3[] PosList = new Vector3[3];
+    Quaternion[] QuartList = new Quaternion[3];
+	[SerializeField]  private  GameEvents  events;
 
 	public GameObject[] ATMSPR= {null,null,null};	
 	public bool FirstRun = true;
@@ -53,8 +60,59 @@ public class Maze1 : MonoBehaviour
 	public void SpawnATM(int ATM, GameObject pr) {
 
             UnityEngine.Vector3 ATMPos = new UnityEngine.Vector3(MazePos[ATM,0], MazePos[ATM,1], MazePos[ATM,2]);
-            UnityEngine.Quaternion CoinQ = new UnityEngine.Quaternion(0,0,0,0);
+            UnityEngine.Quaternion CoinQ = new UnityEngine.Quaternion(0,MazePos[ATM,3],0,0);
             Instantiate(pr, ATMPos, CoinQ);
+    }
+	//List<GameObject> ATMList = new List<GameObject>();
+    public void CaptureData()
+    {
+        MoufaQuartList .Clear();
+        MoufaPosList.Clear();
+		//ATMList.Clear();
+
+        GameObject[] mazeMoufas = GameObject.FindGameObjectsWithTag("MazeMoufa");
+        foreach (GameObject mazeMoufa in mazeMoufas)
+        {
+            MoufaPosList.Add(mazeMoufa.transform.position);
+            MoufaQuartList .Add(mazeMoufa.transform.rotation);
+			//ATMList.Add(mazeMoufa);
+        }
+        
+            GameObject ATM = GameObject.FindGameObjectWithTag("MazeQuiz1");
+            PosList[0] = ATM.transform.position;
+            QuartList[0] = ATM.transform.rotation;
+			GameObject ATM2 = GameObject.FindGameObjectWithTag("MazeQuiz2");
+			PosList[1] = ATM2.transform.position;
+			QuartList[1] = ATM2.transform.rotation;
+			GameObject ATM3 = GameObject.FindGameObjectWithTag("MazeQuiz3");
+			PosList[2] = ATM3.transform.position;
+			QuartList[2] = ATM3.transform.rotation;
+			//ATMList.Add(ATM);
+        
+		events.pendingspawn = true;
 
     }
+	public void RespawnATMs(){
+		for (int i = 0; i < 3; i++)
+		{
+			Debug.Log(PosList[i] + " " + QuartList[i]);
+			Instantiate(ATMSPR[i], PosList[i], QuartList[i]);
+		}
+		for (int i = 0; i < MoufaPosList.Count; i++)
+		{
+			Instantiate(ATMPrmoufa, MoufaPosList[i], MoufaQuartList[i]);
+		}
+		
+	}
+    public void Start()
+    {   Debug.Log("Pass1");
+        if (events.pendingspawn){
+			RespawnATMs();
+			Debug.Log("Pass");
+			events.pendingspawn = false;
+		}
+    }
+
+
+
 }
