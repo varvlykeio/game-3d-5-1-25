@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 64000013538627956}
   - component: {fileID: 4493357618742586290}
   - component: {fileID: 8027155445776631112}
+  - component: {fileID: 3880635855846240915}
   m_Layer: 0
   m_Name: MazeQuiz3
   m_TagString: PendingRotation
@@ -147,6 +148,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.8499999, z: 1.326222}
   m_Center: {x: 0, y: 0.92499995, z: 0.21311128}
+--- !u!114 &3880635855846240915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013774562002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca63ec82d4e48246b864f97e0cf0747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: I
 --- !u!1 &7291450584209277241
 GameObject:
   m_ObjectHideFlags: 0

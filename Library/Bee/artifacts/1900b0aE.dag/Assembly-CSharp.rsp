@@ -378,6 +378,7 @@
 "Assets/Scripts/MainFiles/ScoreManager.cs"
 "Assets/Scripts/MainFiles/Timer.cs"
 "Assets/Scripts/MainFiles/UiAppear.cs"
+"Assets/Scripts/MainFiles/UiAppearPrefabs.cs"
 "Assets/Scripts/Maze Levels/Maze.cs"
 "Assets/Scripts/Maze Levels/MazeMenu.cs"
 "Assets/Scripts/Maze Levels/Teleporter.cs"

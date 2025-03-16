@@ -8,6 +8,8 @@ TagManager:
   - MazeMoufa
   - PendingRotation
   - MazeQuiz1
+  - I
+  - OOR
   layers:
   - Default
   - TransparentFX

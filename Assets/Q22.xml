@@ -2,40 +2,24 @@
 <Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Questions>
     <Question>
-      <Info>Οι μεταβλητές στη ΓΛΩΣΣΑ μπορεί να δηλωθούν ως:</Info>
+      <Info>Ένας αλγόριθμος μπορεί να μη δέχεται κάποια τιμή ως είσοδο από το χρήστη, αλλά μπορεί να παράγει μόνος του τα δεδομένα χρησιμοποιώντας απλές εντολές. </Info>
       <Answers>
         <Answer>
-          <Info>ΑΚΕΡΑΙΕΣ</Info>
+          <Info>Σωστό</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>ΠΡΑΓΜΑΤΙΚΕΣ</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>ΣΤΟΙΒΕΣ</Info>
+          <Info>Λάθος</Info>
           <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>ΛΟΓΙΚΕΣ</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>ΛΙΣΤΕΣ</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>ΧΑΡΑΚΤΗΡΕΣ</Info>
-          <IsCorrect>true</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>30</Timer>
-      <Type>Multi</Type>
-      <AddScore>30</AddScore>
+      <Timer>22</Timer>
+      <Type>Single</Type>
+      <AddScore>75</AddScore>
     </Question>
-    <Question>
-      <Info>To όνομα μεταβλητής 23α είναι αποδεχτό στην ΓΛΩΣΣΑ</Info>
+     <Question>
+      <Info>Ένας αλγόριθμος μπορεί να εκτελείται επ' άπειρον.  </Info>
       <Answers>
         <Answer>
           <Info>Σωστό</Info>
@@ -47,51 +31,43 @@
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>23</Timer>
+      <Timer>22</Timer>
       <Type>Single</Type>
-      <AddScore>22</AddScore>
+      <AddScore>75</AddScore>
     </Question>
     <Question>
-      <Info>To σώμα εντολών που περιλαμβάνεται στην επαναληψη ΟΣΟ</Info>
+      <Info>Μια λογική μεταβλητή μπορεί να πάρει την τιμή ΑΛΗΘΗΣ ή την τιμή ΨΕΥΔΗΣ.    </Info>
       <Answers>
         <Answer>
-          <Info>εκτελείται τουλάχιστον μία φορά</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>μπορεί να μην εκτελεστεί καμία φορά</Info>
+          <Info>Σωστό</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>εκτελείται πάντα τόσες φορές όσο και το βήμα</Info>
+          <Info>Λάθος</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>30</Timer>
+      <Timer>22</Timer>
       <Type>Single</Type>
-      <AddScore>22</AddScore>
+      <AddScore>75</AddScore>
     </Question>
     <Question>
-      <Info>Μετά την εκτέλεση της εντολής y&lt;-10 DIV 9 - 10 MOD 9  </Info>
+      <Info>Η  εντολή   X &lt;- Y+1 έχει  το   ίδιο   αποτέλεσμα  με   τη συνθήκη X = Y + 1. </Info>
       <Answers>
         <Answer>
-          <Info>2</Info>
+          <Info>Σωστό</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>1</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>0</Info>
+          <Info>Λάθος</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>23</Timer>
+      <Timer>22</Timer>
       <Type>Single</Type>
-      <AddScore>22</AddScore>
+      <AddScore>75</AddScore>
     </Question>
-  </Questions>      
+  </Questions>
 </Data>

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33000010613709406}
   - component: {fileID: 23000010130885442}
   - component: {fileID: 64000013538627956}
+  - component: {fileID: 5804113960364760279}
+  - component: {fileID: 8559980369503641023}
   m_Layer: 0
   m_Name: MazeMoufa
   m_TagString: PendingRotation
@@ -107,6 +109,40 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9c9c01ea5d9bcf74db52c9818f202508, type: 3}
+--- !u!114 &5804113960364760279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013774562002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca63ec82d4e48246b864f97e0cf0747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: OOR
+--- !u!65 &8559980369503641023
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013774562002}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.8499999, z: 1.8044541}
+  m_Center: {x: 0, y: 0.92499995, z: 0.45222712}
 --- !u!1 &5258556578481755862
 GameObject:
   m_ObjectHideFlags: 0

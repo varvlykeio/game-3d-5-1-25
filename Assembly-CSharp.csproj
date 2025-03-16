@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Maze Levels\MazeMenu.cs" />
     <Compile Include="Assets\Scripts\Mono\GameManager.cs" />
     <Compile Include="Assets\Scripts\Quiz Levels\STARTER ATM.cs" />
+    <Compile Include="Assets\Scripts\MainFiles\UiAppearPrefabs.cs" />
     <Compile Include="Assets\Scripts\Menu Scripts\ResolutionScore.cs" />
     <Compile Include="Assets\Scripts\Quiz Levels\QuizChecker1.cs" />
     <Compile Include="Assets\Scripts\Mono\AnswerData.cs" />
@@ -124,6 +125,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Sakis.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\_Barking_Dog\Readme_Please.txt" />

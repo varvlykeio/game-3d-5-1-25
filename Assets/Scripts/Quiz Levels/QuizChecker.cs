@@ -6,9 +6,8 @@ using System.Data.Common;
 using JetBrains.Annotations;
 using System;
 using GameEv;
-using UnityEditor.UI;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
+
+
 
 
 namespace QuizCol {

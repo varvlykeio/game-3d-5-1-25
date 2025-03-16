@@ -32,7 +32,7 @@
       <UseTimer>true</UseTimer>
       <Timer>30</Timer>
       <Type>Multi</Type>
-      <AddScore>30</AddScore>
+      <AddScore>300</AddScore>
     </Question>
     <Question>
       <Info>To όνομα μεταβλητής 23α είναι αποδεχτό στην ΓΛΩΣΣΑ</Info>
@@ -49,7 +49,7 @@
       <UseTimer>true</UseTimer>
       <Timer>23</Timer>
       <Type>Single</Type>
-      <AddScore>22</AddScore>
+      <AddScore>300</AddScore>
     </Question>
     <Question>
       <Info>To σώμα εντολών που περιλαμβάνεται στην επαναληψη ΟΣΟ</Info>
@@ -70,10 +70,12 @@
       <UseTimer>true</UseTimer>
       <Timer>30</Timer>
       <Type>Single</Type>
-      <AddScore>22</AddScore>
+      <AddScore>300</AddScore>
     </Question>
     <Question>
-      <Info>Μετά την εκτέλεση της εντολής y&lt;-10 DIV 9 - 10 MOD 9  </Info>
+      <Info>Μετά την εκτέλεση της εντολής 
+      y&lt;-10 DIV 9 - 10 MOD 9, 
+      το y παίρνει την τιμή: </Info>
       <Answers>
         <Answer>
           <Info>2</Info>
@@ -91,7 +93,7 @@
       <UseTimer>true</UseTimer>
       <Timer>23</Timer>
       <Type>Single</Type>
-      <AddScore>22</AddScore>
+      <AddScore>300</AddScore>
     </Question>
   </Questions>      
 </Data>

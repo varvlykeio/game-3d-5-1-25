@@ -2,54 +2,129 @@
 <Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Questions>
     <Question>
-      <Info>What is the diameter of the Moon?</Info>
+      <Info>Δίνεται το παρακάτω τμήμα προγράμματος:
+    i &lt;-A
+    OΣΟ i&lt;=M EΠΑΝΑΛΑΒΕ
+    ΓΡΑΨΕ i
+    i&lt;-i+2
+    ΤΕΛΟΣ_ΕΠΑΝΑΛΗΨΗΣ 
+        Για να εκτελεστεί η εντολή εξόδου 3 φορές θα πρέπει η μεταβλητή Μ να πάρει την τιμή
+    </Info>
       <Answers>
         <Answer>
-          <Info>2,212.2 KM</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>1,737.1 KM</Info>
+          <Info>Α + 5</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>4,128.2 KM</Info>
+          <Info>Α + 1</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
-        <Answer>
-          <Info>1,652.4 KM</Info>
+         <Answer>
+          <Info>Α - 1</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>25</Timer>
+      <Timer>22</Timer>
       <Type>Single</Type>
-      <AddScore>100</AddScore>
+      <AddScore>1000</AddScore>
+    </Question>
+     <Question>
+      <Info>Τα λογικά λάθη δεν προκαλούν τη διακοπή της εκτέλεσης του προγράμματος. </Info>
+      <Answers>
+        <Answer>
+          <Info>Σωστό</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Λάθος</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>22</Timer>
+      <Type>Single</Type>
+      <AddScore>1000</AddScore>
     </Question>
     <Question>
-      <Info>Sun Temerature is .. ?</Info>
+      <Info>Έστω ουρά που υλοποιείται με μονοδιάστατο πίνακα Ο[Ν]. Για τη διαχείριση των λειτουργιών της χρησιμοποιούνται μεταβλητές με ονόματα front και rear. Όταν η ουρά έχει μόνο ένα στοιχείο τοτε ισχύει πάντα ότι: </Info>
       <Answers>
         <Answer>
-          <Info>1,522 K</Info>
+          <Info> front = 1 ΚΑΙ rear = 1</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>10,127 K</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>5,778 K</Info>
+          <Info>front = rear</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>4,852 K</Info>
+          <Info>front = N</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>front = rear + 1</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>25</Timer>
+      <Timer>22</Timer>
       <Type>Single</Type>
-      <AddScore>100</AddScore>
+      <AddScore>1000</AddScore>
+    </Question>
+    <Question>
+      <Info> Τι θα εμαφανίσει το παρακάτω τμήμ αλγορίθμου, στην περίπτωση που δοθεί η τιμή 15 για την μεταβλητή x και η τιμή 95 για την μεταβλητή y.
+          Διάβασε x
+          Διάβασε y
+          Όσο x &lt; 19 επανάλαβε
+            x &lt;- x + 2
+            y &lt;- y - x + 1
+          τέλος_επανάληψης
+          εμφάνισε y
+      </Info>
+      <Answers>
+        <Answer>
+          <Info>50</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>61</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>71</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+          <Answer>
+          <Info>81</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>22</Timer>
+      <Type>Single</Type>
+      <AddScore>1000</AddScore>
+    </Question>
+    <Question>
+      <Info> Η παράλειψη δήλωσης μεταβλητής αποτελεί
+      </Info>
+      <Answers>
+        <Answer>
+          <Info>Συντακτικό λάθος</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Λογικό λάθος</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info> Λάθος κατά την εκτέλεση</Info>
+          <IsCorrect>false</IsCorrect>
+          </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>22</Timer>
+      <Type>Single</Type>
+      <AddScore>1000</AddScore>
     </Question>
   </Questions>
 </Data>

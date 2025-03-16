@@ -2,105 +2,72 @@
 <Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Questions>
     <Question>
-      <Info>ερ1</Info>
+      <Info>Η εντολή ΑΡΧΗ_ΕΠΑΝΑΛΗΨΗΣ…ΜΕΧΡΙΣ_ΟΤΟΥ μπορεί να μην εκτελεστεί καμία φορά.</Info>
       <Answers>
         <Answer>
-          <Info>Βαρκελώνη</Info>
+          <Info>Σωστό</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Λάθος</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>22</Timer>
+      <Type>Single</Type>
+      <AddScore>100</AddScore>
+    </Question>
+     <Question>
+      <Info> O βρόχος ΓΙΑ Κ ΑΠΟ 5 ΜΕΧΡΙ 5 δεν εκτελείται καμία φορά.</Info>
+      <Answers>
+        <Answer>
+          <Info>Σωστό</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Λάθος</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>22</Timer>
+      <Type>Single</Type>
+      <AddScore>100</AddScore>
+    </Question>
+    <Question>
+      <Info>Κάθε εντολή ΟΣΟ…ΕΠΑΝΑΛΑΒΕ μπορεί να αντικατασταθεί από μια ΓΙΑ…ΑΠΟ…ΜΕΧΡΙ, με ισοδύναμο αποτέλεσμα.    </Info>
+      <Answers>
+        <Answer>
+          <Info>Σωστό</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Λάθος</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>22</Timer>
+      <Type>Single</Type>
+      <AddScore>100</AddScore>
+    </Question>
+    <Question>
+      <Info>Η εντολή ΟΣΟ…ΕΠΑΝΑΛΑΒΕ επαναλαμβάνεται μέχρι η συνθήκη της να λάβει τιμή ΨΕΥΔΗΣ. </Info>
+      <Answers>
+        <Answer>
+          <Info>Σωστό</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>Μοναχο</Info>
+          <Info>Λάθος</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
       <Timer>22</Timer>
-      <Type>Multi</Type>
-      <AddScore>22</AddScore>
-    </Question>
-    <Question>
-      <Info>ερ2</Info>
-      <Answers>
-        <Answer>
-          <Info>αλεπου</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>Λίο</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>κουταβι</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>33</Timer>
-      <Type>Multi</Type>
-      <AddScore>33</AddScore>
-    </Question>
-    <Question>
-      <Info>ερ3</Info>
-      <Answers>
-        <Answer>
-          <Info>δεν ξερω</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>παμε</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>θαλλασα</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>βουνο</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>44</Timer>
-      <Type>Multi</Type>
-      <AddScore>44</AddScore>
-    </Question>
-    <Question>
-      <Info>ερ4</Info>
-      <Answers>
-        <Answer>
-          <Info>γη</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>ουρανος</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>33</Timer>
-      <Type>Multi</Type>
-      <AddScore>33</AddScore>
-    </Question>
-    <Question>
-      <Info>ερωτηση3</Info>
-      <Answers>
-        <Answer>
-          <Info>Κωστας</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>Σακης</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>Αρης</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>26</Timer>
-      <Type>Multi</Type>
-      <AddScore>30</AddScore>
+      <Type>Single</Type>
+      <AddScore>100</AddScore>
     </Question>
   </Questions>
 </Data>

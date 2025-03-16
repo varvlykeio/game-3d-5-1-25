@@ -2,32 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameEv;
+using Unity.VisualScripting;
 public class MazeMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject Menu;
     public GameEvents events;
-    public bool appear = false;
-
-    void Start()
-    {
-        Menu.SetActive(false);  
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E)&&  events.triggered== true)
-        {
-            if (appear)
+    void Update(){
+        if(events.isPaused == false){
+            if (events.triggered== true)
             {
-                Menu.SetActive(false);
-                appear = false;
-                events.CursorLock = true;
+            events.CursorLock = false;
             }
-            else
-            {
-                Menu.SetActive(true);
-                appear = true;
-                events.CursorLock = false;
+            else{
+                events.CursorLock = true; 
             }
         }
     }

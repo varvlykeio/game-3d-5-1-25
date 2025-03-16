@@ -40,7 +40,7 @@ namespace CC{
                                 // CoinR[level , x/y/z....]                    v-int-v
                                 //     x1  ,   x2  ,    y   ,   z1  ,  z2  ,   ammount 
         public float[,] CoinR =  { {  -202f  ,  -228f  ,  0.5f  ,  63f  , 10f  ,     10     },    //Level 0
-                                   {   0   ,   0   ,   0    ,   0    ,  0   ,     2     },    //Level 1 -   Math      }
+                                   {   -137.6336f   ,   -238.2793f   ,   -4    ,  -10.35214f    ,  -66   ,     100     },    //Level 1 -   Math      }
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     0     },    //Level 2 -  Coding     |
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     0     },    //Level 3 - History     |  Coordinates to 
                                    {   0   ,   0   ,   0    ,   0    ,  0   ,     0     },    //Level 4 - Language    |  be figured out
@@ -123,7 +123,10 @@ namespace CC{
             if (diadromos ==true){
                 
                 for(float i=0; i<= CoinR[level,5]-1; i++){
-                    Invoke("SpawnCoin",0.3f);
+                    Invoke("SpawnCoin",0.5f);
+                }
+                for(float i=0; i<= CoinR[level+1,5]-1; i++){
+                    Invoke("SpawnCoinsLabyrinth",0.5f);
                 }
                 diadromos= false;
 
@@ -156,7 +159,12 @@ namespace CC{
             UnityEngine.Vector3 randCoinPos = new UnityEngine.Vector3(UnityEngine.Random.Range(CoinR[level,0], CoinR[level,1]), CoinR[level,2], UnityEngine.Random.Range(CoinR[level,3], CoinR[level,4]));
             UnityEngine.Quaternion CoinQ = new UnityEngine.Quaternion(0,0,0,0);
             Instantiate(coin, randCoinPos, CoinQ);
-
+            
+        }
+        private void SpawnCoinsLabyrinth(){
+            UnityEngine.Vector3 randCoinPos2 = new UnityEngine.Vector3(UnityEngine.Random.Range(CoinR[level+1,0], CoinR[level+1,1]), CoinR[level+1,2], UnityEngine.Random.Range(CoinR[+1,3], CoinR[level+1,4]));
+            UnityEngine.Quaternion CoinQ2 = new UnityEngine.Quaternion(0,0,0,0);
+            Instantiate(coin, randCoinPos2, CoinQ2);
         }
 
         public void TransportPlayer(){
