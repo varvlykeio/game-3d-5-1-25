@@ -2,96 +2,54 @@
 <Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Questions>
     <Question>
-      <Info>Οι μεταβλητές στη ΓΛΩΣΣΑ μπορεί να δηλωθούν ως:</Info>
+      <Info>What is the diameter of the Moon?</Info>
       <Answers>
         <Answer>
-          <Info>ΑΚΕΡΑΙΕΣ</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>ΠΡΑΓΜΑΤΙΚΕΣ</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>ΣΤΟΙΒΕΣ</Info>
+          <Info>2,212.2 KM</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>ΛΟΓΙΚΕΣ</Info>
+          <Info>1,737.1 KM</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>ΛΙΣΤΕΣ</Info>
+          <Info>4,128.2 KM</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>ΧΑΡΑΚΤΗΡΕΣ</Info>
-          <IsCorrect>true</IsCorrect>
+          <Info>1,652.4 KM</Info>
+          <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>30</Timer>
-      <Type>Multi</Type>
-      <AddScore>30</AddScore>
+      <Timer>25</Timer>
+      <Type>Single</Type>
+      <AddScore>100</AddScore>
     </Question>
     <Question>
-      <Info>To όνομα μεταβλητής 23α είναι αποδεχτό στην ΓΛΩΣΣΑ</Info>
+      <Info>Sun Temerature is .. ?</Info>
       <Answers>
         <Answer>
-          <Info>Σωστό</Info>
+          <Info>1,522 K</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>Λάθος</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>23</Timer>
-      <Type>Single</Type>
-      <AddScore>22</AddScore>
-    </Question>
-    <Question>
-      <Info>To σώμα εντολών που περιλαμβάνεται στην επαναληψη ΟΣΟ</Info>
-      <Answers>
-        <Answer>
-          <Info>εκτελείται τουλάχιστον μία φορά</Info>
+          <Info>10,127 K</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>μπορεί να μην εκτελεστεί καμία φορά</Info>
+          <Info>5,778 K</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>εκτελείται πάντα τόσες φορές όσο και το βήμα</Info>
+          <Info>4,852 K</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>30</Timer>
+      <Timer>25</Timer>
       <Type>Single</Type>
-      <AddScore>22</AddScore>
+      <AddScore>100</AddScore>
     </Question>
-    <Question>
-      <Info>Μετά την εκτέλεση της εντολής y&lt;-10 DIV 9 - 10 MOD 9  </Info>
-      <Answers>
-        <Answer>
-          <Info>2</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>1</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>0</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>23</Timer>
-      <Type>Single</Type>
-      <AddScore>22</AddScore>
-    </Question>
-  </Questions>      
+  </Questions>
 </Data>

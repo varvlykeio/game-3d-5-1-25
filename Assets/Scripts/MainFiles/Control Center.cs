@@ -161,6 +161,7 @@ namespace CC{
 
         public void TransportPlayer(){
             events.pendingtransport = true;
+            events.pendingspawn = true;
         }
 
         public void OnApplicationQuit(){       

@@ -2,54 +2,96 @@
 <Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Questions>
     <Question>
-      <Info>Choose correct answer:</Info>
+      <Info>Οι μεταβλητές στη ΓΛΩΣΣΑ μπορεί να δηλωθούν ως:</Info>
       <Answers>
         <Answer>
-          <Info>Επιλογή 1</Info>
+          <Info>ΑΚΕΡΑΙΕΣ</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΠΡΑΓΜΑΤΙΚΕΣ</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΣΤΟΙΒΕΣ</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>Car is a vehicle</Info>
+          <Info>ΛΟΓΙΚΕΣ</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΛΙΣΤΕΣ</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ΧΑΡΑΚΤΗΡΕΣ</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>25</Timer>
-      <Type>Single</Type>
-      <AddScore>10</AddScore>
+      <Timer>30</Timer>
+      <Type>Multi</Type>
+      <AddScore>30</AddScore>
     </Question>
     <Question>
-      <Info>Επίλεξε φαγητό</Info>
+      <Info>To όνομα μεταβλητής 23α είναι αποδεχτό στην ΓΛΩΣΣΑ</Info>
       <Answers>
         <Answer>
-          <Info>Rice</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>Spaghetti</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>Cardboard</Info>
+          <Info>Σωστό</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>Salad</Info>
+          <Info>Λάθος</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>23</Timer>
+      <Type>Single</Type>
+      <AddScore>22</AddScore>
+    </Question>
+    <Question>
+      <Info>To σώμα εντολών που περιλαμβάνεται στην επαναληψη ΟΣΟ</Info>
+      <Answers>
         <Answer>
-          <Info>Stone</Info>
+          <Info>εκτελείται τουλάχιστον μία φορά</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>Glasses</Info>
+          <Info>μπορεί να μην εκτελεστεί καμία φορά</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>εκτελείται πάντα τόσες φορές όσο και το βήμα</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>10</Timer>
-      <Type>Multi</Type>
-      <AddScore>25</AddScore>
+      <Timer>30</Timer>
+      <Type>Single</Type>
+      <AddScore>22</AddScore>
     </Question>
-  </Questions>
+    <Question>
+      <Info>Μετά την εκτέλεση της εντολής y&lt;-10 DIV 9 - 10 MOD 9  </Info>
+      <Answers>
+        <Answer>
+          <Info>2</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>1</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>0</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>23</Timer>
+      <Type>Single</Type>
+      <AddScore>22</AddScore>
+    </Question>
+  </Questions>      
 </Data>

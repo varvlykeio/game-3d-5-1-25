@@ -10,6 +10,7 @@ using Unity.VisualScripting;
 using CC;
 using UnityEditor.PackageManager;
 using GameEv;
+using UnityEngine.UIElements;
 
 
 public class Maze1 : MonoBehaviour
@@ -18,16 +19,16 @@ public class Maze1 : MonoBehaviour
 	public GameObject ATMPrmoufa;
 									  // MazePos[ No. , x/y/z....]                    v-int-v
                                    //      x       ,     y     ,       z     , RotationY
-	public float[,] MazePos =  {   {  -237.4f      ,  -4.625f  ,  -52.60674f , 180},    
-                                   {  -187.1933f   ,  -4.625f  ,  -66.2f     ,  90},    
-                                   {  -167.6068f   ,  -4.625f  ,  -50.4f     , -90},  
-                                   {  -141.4f      ,  -4.625f  ,  -46.60674f , 180},   
-                                   {  -137.6068f   ,  -4.625f  ,  -32.4f     , -90},   
-                                   {  -203.7f      ,  -4.625f  ,  -46.706f   , 180},
-								   {  -203.7067f   ,  -4.625f  ,  -35.4f     , -90},
-								   {  -187.1933f   ,  -4.625f  ,  -29.4f     ,  90},
-								   {  -215.7067f   ,  -4.625f  ,  -20.4f     , -90},
-								   {  -160.1933f   ,  -4.625f  ,  -17.4f     ,  90}, };
+	public float[,] MazePos =  {   {  -234f        ,  -4.625f  ,  -66.32f    , 0},    
+                                   {  -187.1933f   ,  -4.625f  ,  -66.2f     , 0},    
+                                   {  -167.6068f   ,  -4.625f  ,  -51.29f    , 0},  
+                                   {  -156.94f     ,  -4.625f  ,  -51.09f    , 0},   
+                                   {  -137.6068f   ,  -4.625f  ,  -33.29f    , 0},   
+                                   {  -203.7f      ,  -4.625f  ,  -57.277f   , 0},
+								   {  -203.7067f   ,  -4.625f  ,  -36.34f    , 0},
+								   {  -187.1933f   ,  -4.625f  ,  -30.23f    , 0},
+								   {  -215.7067f   ,  -4.625f  ,  -21.32f    , 0},
+								   {  -160.1933f   ,  -4.625f  ,  -18.2f     , 0}};
 	int ATM;    
 	List<Quaternion> MoufaQuartList = new List<Quaternion>();
     List<Vector3> MoufaPosList = new List<Vector3>();
@@ -55,16 +56,20 @@ public class Maze1 : MonoBehaviour
 			numbers.Remove(ATM);
 			SpawnATM(ATM, ATMPrmoufa);
 		}	
+		//CaptureData();
 	}
 
 	public void SpawnATM(int ATM, GameObject pr) {
-
             UnityEngine.Vector3 ATMPos = new UnityEngine.Vector3(MazePos[ATM,0], MazePos[ATM,1], MazePos[ATM,2]);
-            UnityEngine.Quaternion CoinQ = new UnityEngine.Quaternion(0,MazePos[ATM,3],0,0);
+            UnityEngine.Quaternion CoinQ = new UnityEngine.Quaternion(0,0,0,0);
             Instantiate(pr, ATMPos, CoinQ);
+			GameObject tbr = GameObject.Find("PendingRotation");
+			tbr.transform.parent.gameObject.transform.Rotate(0, MazePos[ATM,3], 0);
+			Destroy(tbr);
+
     }
 	//List<GameObject> ATMList = new List<GameObject>();
-    public void CaptureData()
+    /*public void CaptureData()
     {
         MoufaQuartList .Clear();
         MoufaPosList.Clear();
@@ -81,35 +86,40 @@ public class Maze1 : MonoBehaviour
             GameObject ATM = GameObject.FindGameObjectWithTag("MazeQuiz1");
             PosList[0] = ATM.transform.position;
             QuartList[0] = ATM.transform.rotation;
+			Debug.Log(PosList[0] + " " + QuartList[0]);	
 			GameObject ATM2 = GameObject.FindGameObjectWithTag("MazeQuiz2");
 			PosList[1] = ATM2.transform.position;
 			QuartList[1] = ATM2.transform.rotation;
+			Debug.Log(PosList[1] + " " + QuartList[1]);
 			GameObject ATM3 = GameObject.FindGameObjectWithTag("MazeQuiz3");
 			PosList[2] = ATM3.transform.position;
 			QuartList[2] = ATM3.transform.rotation;
+			Debug.Log(PosList[2] + " " + QuartList[2]);
 			//ATMList.Add(ATM);
         
 		events.pendingspawn = true;
 
     }
-	public void RespawnATMs(){
+	/*public void RespawnATMs(){
 		for (int i = 0; i < 3; i++)
 		{
 			Debug.Log(PosList[i] + " " + QuartList[i]);
 			Instantiate(ATMSPR[i], PosList[i], QuartList[i]);
 		}
+		Debug.Log(MoufaPosList.Count);
 		for (int i = 0; i < MoufaPosList.Count; i++)
 		{
 			Instantiate(ATMPrmoufa, MoufaPosList[i], MoufaQuartList[i]);
 		}
 		
-	}
-    public void Start()
-    {   Debug.Log("Pass1");
+	}*/
+    public void Start(){   
+		//Debug.Log("Pass1");
         if (events.pendingspawn){
-			RespawnATMs();
-			Debug.Log("Pass");
-			events.pendingspawn = false;
+			MazeStart();
+			//RespawnATMs();
+			//Debug.Log("Pass");
+			//events.pendingspawn = false;
 		}
     }
 

@@ -6,9 +6,8 @@ TagManager:
   tags:
   - SDL
   - MazeMoufa
+  - PendingRotation
   - MazeQuiz1
-  - MazeQuiz2
-  - MazeQuiz3
   layers:
   - Default
   - TransparentFX

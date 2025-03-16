@@ -2,54 +2,131 @@
 <Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Questions>
     <Question>
-      <Info>What is the diameter of the Moon?</Info>
+      <Info>Η παρουσίαση της ανάλυσης ενός προβλήματος μπορεί να γίνει</Info>
       <Answers>
         <Answer>
-          <Info>2,212.2 KM</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>1,737.1 KM</Info>
+          <Info>Φραστικά</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>4,128.2 KM</Info>
+          <Info>Λογικά</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
         <Answer>
-          <Info>1,652.4 KM</Info>
+          <Info>Διαγραμματικά</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Αφηγηματικά</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>25</Timer>
-      <Type>Single</Type>
-      <AddScore>100</AddScore>
+      <Timer>22</Timer>
+      <Type>Multi</Type>
+      <AddScore>22</AddScore>
     </Question>
     <Question>
-      <Info>Sun Temerature is .. ?</Info>
+      <Info>Οι λόγοι για τους οποίους ανατίθεται η λύση προβλημάτων σε υπολογιστή σχετίζονται με την/τον</Info>
       <Answers>
         <Answer>
-          <Info>1,522 K</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>10,127 K</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>5,778 K</Info>
+          <Info>πολυπλοκότητα των υπολογισμών</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>4,852 K</Info>
+          <Info>μικρό όγκο δεδομένων </Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ευφυΐα του υπολογιστή</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>επαναληπτικότητα των διαδικασιών</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>33</Timer>
+      <Type>Multi</Type>
+      <AddScore>33</AddScore>
+    </Question>
+    <Question>
+      <Info>Το πρόβλημα της εύρεσης της απόστασης που διάνυσε ένα σώμα το οποίο κινείται ευθύγραμμα και ομαλά, χωρίς να έχει επιτάχυνση, είναι:</Info>
+      <Answers>
+        <Answer>
+          <Info>επιλύσιμο</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>ανοικτό</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>υπολογιστικό</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>μη επιλύσιμο</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>25</Timer>
+      <Timer>44</Timer>
+      <Type>Multi</Type>
+      <AddScore>44</AddScore>
+    </Question>
+    <Question>
+    <Info>Το παρακάτω τμήμα αλγορίθμου θα εμφανίσει την τιμή: 
+    Χ&lt;-4
+    Ζ&lt;-5
+    Υ&lt;-(Χ+Ζ)^(1/2)
+    ΓΡΑΨΕ Υ</Info>
+      
+      <Answers>
+        <Answer>
+          <Info>3</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>4</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>5</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>33</Timer>
       <Type>Single</Type>
-      <AddScore>100</AddScore>
+      <AddScore>33</AddScore>
+    </Question>
+    <Question>
+      <Info>Οι λειτουργίες της Στοίβας είναι:</Info>
+      <Answers>
+        <Answer>
+          <Info>Εισαγωγή</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Ώθηση</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>Απώθηση</Info>
+          <IsCorrect>true</IsCorrect>
+        </Answer>
+         <Answer>
+          <Info>Εξαγωγή</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+      </Answers>
+      <UseTimer>true</UseTimer>
+      <Timer>26</Timer>
+      <Type>Multi</Type>
+      <AddScore>30</AddScore>
     </Question>
   </Questions>
 </Data>
+			
