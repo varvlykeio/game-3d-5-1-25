@@ -158,13 +158,14 @@ namespace CC{
 
             UnityEngine.Vector3 randCoinPos = new UnityEngine.Vector3(UnityEngine.Random.Range(CoinR[level,0], CoinR[level,1]), CoinR[level,2], UnityEngine.Random.Range(CoinR[level,3], CoinR[level,4]));
             UnityEngine.Quaternion CoinQ = new UnityEngine.Quaternion(0,0,0,0);
-            Instantiate(coin, randCoinPos, CoinQ);
-            
+            GameObject n = Instantiate(coin, randCoinPos, CoinQ);
+            n.tag = "Coin";            
         }
-        private void SpawnCoinsLabyrinth(){
+        public void SpawnCoinsLabyrinth(){
             UnityEngine.Vector3 randCoinPos2 = new UnityEngine.Vector3(UnityEngine.Random.Range(CoinR[level+1,0], CoinR[level+1,1]), CoinR[level+1,2], UnityEngine.Random.Range(CoinR[+1,3], CoinR[level+1,4]));
             UnityEngine.Quaternion CoinQ2 = new UnityEngine.Quaternion(0,0,0,0);
-            Instantiate(coin, randCoinPos2, CoinQ2);
+            GameObject n = Instantiate(coin, randCoinPos2, CoinQ2);
+            n.GetComponent<CoinsNS.Coin>().MazeCoin = true;
         }
 
         public void TransportPlayer(){

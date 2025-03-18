@@ -1,26 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using CC;
-using UnityEngine.UI;
 using GameEv;
 
+namespace CoinsNS
+{
+    public class Coin : MonoBehaviour
+    {
+        [SerializeField] private ControlCenter coins = null;
+        [SerializeField] private GameEvents events = null;
+        public bool MazeCoin ;
 
-namespace CoinsNS{
-    public class Coin : MonoBehaviour{  
-
-        ControlCenter coins = null;
-        [SerializeField]    GameEvents          events                  = null;
-
-        public void OnTriggerEnter(){
+        private void Start()
+        {
             GameObject tempObj = GameObject.Find("Control Center");
-            coins = tempObj.GetComponent<ControlCenter>();
-            events.TotalScore += events.CoinImportance;
-            events.coinScore += events.CoinImportance;
-            Destroy(gameObject);
-        
-            
+            if (tempObj != null)
+            {
+                coins = tempObj.GetComponent<ControlCenter>();
+            }
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player") ){
+                events.TotalScore += events.CoinImportance;
+                events.coinScore += events.CoinImportance;
+                Destroy(gameObject);
+            }
+            else{
+                if(MazeCoin){
+                    coins.SpawnCoinsLabyrinth();
+                }
+                else
+                {
+                    coins.SpawnCoin();
+                }
+                Debug.Log("Respawn");
+                Destroy(gameObject); 
+            }
 
         }
     }
-}   
+}
