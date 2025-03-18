@@ -18,16 +18,16 @@ public class Maze1 : MonoBehaviour
 	public GameObject ATMPrmoufa;
 									  // MazePos[ No. , x/y/z....]                    v-int-v
                                    //      x       ,     y     ,       z     , RotationY
-	public float[,] MazePos =  {   {  -234f        ,  -4.625f  ,  -66.32f    , 0},    
-                                   {  -187.1933f   ,  -4.625f  ,  -66.2f     , 0},    
-                                   {  -167.6068f   ,  -4.625f  ,  -51.29f    , 0},  
-                                   {  -156.94f     ,  -4.625f  ,  -51.09f    , 0},   
-                                   {  -137.6068f   ,  -4.625f  ,  -33.29f    , 0},   
-                                   {  -203.7f      ,  -4.625f  ,  -57.277f   , 0},
-								   {  -203.7067f   ,  -4.625f  ,  -36.34f    , 0},
-								   {  -187.1933f   ,  -4.625f  ,  -30.23f    , 0},
-								   {  -215.7067f   ,  -4.625f  ,  -21.32f    , 0},
-								   {  -160.1933f   ,  -4.625f  ,  -18.2f     , 0}};
+	public float[,] MazePos =  {{  -237.4f      ,  -4.625f  ,  -52.60674f , 180},    
+								{  -187.1933f   ,  -4.625f  ,  -66.2f     ,  90},    
+								{  -167.6068f   ,  -4.625f  ,  -50.4f     , -90},  
+								{  -141.4f      ,  -4.625f  ,  -46.60674f , 180},   
+								{  -137.6068f   ,  -4.625f  ,  -32.4f     , -90},   
+								{  -203.7f      ,  -4.625f  ,  -46.706f   , 180},
+								{  -203.7067f   ,  -4.625f  ,  -35.4f     , -90},
+								{  -187.1933f   ,  -4.625f  ,  -29.4f     ,  90},
+								{  -215.7067f   ,  -4.625f  ,  -20.4f     , -90},
+								{  -160.1933f   ,  -4.625f  ,  -17.4f     ,  90}};
 	int ATM;    
 	List<Quaternion> MoufaQuartList = new List<Quaternion>();
     List<Vector3> MoufaPosList = new List<Vector3>();
@@ -60,12 +60,8 @@ public class Maze1 : MonoBehaviour
 
 	public void SpawnATM(int ATM, GameObject pr) {
             UnityEngine.Vector3 ATMPos = new UnityEngine.Vector3(MazePos[ATM,0], MazePos[ATM,1], MazePos[ATM,2]);
-            UnityEngine.Quaternion CoinQ = new UnityEngine.Quaternion(0,0,0,0);
+			UnityEngine.Quaternion CoinQ = UnityEngine.Quaternion.AngleAxis(MazePos[ATM,3], Vector3.up);
             Instantiate(pr, ATMPos, CoinQ);
-			GameObject tbr = GameObject.Find("PendingRotation");
-			tbr.transform.parent.gameObject.transform.Rotate(0, MazePos[ATM,3], 0);
-			Destroy(tbr);
-
     }
 	//List<GameObject> ATMList = new List<GameObject>();
     /*public void CaptureData()
