@@ -6,10 +6,11 @@ TagManager:
   tags:
   - SDL
   - MazeMoufa
-  - PendingRotation
   - MazeQuiz1
   - I
   - OOR
+  - MazeCoin
+  - Coin
   layers:
   - Default
   - TransparentFX
