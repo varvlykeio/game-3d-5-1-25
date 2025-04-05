@@ -17,6 +17,7 @@
       <Timer>22</Timer>
       <Type>Multi</Type>
       <AddScore>22</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>ερ2</Info>
@@ -38,6 +39,7 @@
       <Timer>33</Timer>
       <Type>Multi</Type>
       <AddScore>33</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>ερ3</Info>
@@ -63,6 +65,7 @@
       <Timer>44</Timer>
       <Type>Multi</Type>
       <AddScore>44</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>ερ4</Info>
@@ -80,6 +83,7 @@
       <Timer>33</Timer>
       <Type>Multi</Type>
       <AddScore>33</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>ερωτηση3</Info>
@@ -101,6 +105,7 @@
       <Timer>26</Timer>
       <Type>Multi</Type>
       <AddScore>30</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
   </Questions>
 </Data>

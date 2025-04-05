@@ -17,6 +17,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>100</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
      <Question>
       <Info> O βρόχος ΓΙΑ Κ ΑΠΟ 5 ΜΕΧΡΙ 5 δεν εκτελείται καμία φορά.</Info>
@@ -34,6 +35,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>100</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Κάθε εντολή ΟΣΟ…ΕΠΑΝΑΛΑΒΕ μπορεί να αντικατασταθεί από μια ΓΙΑ…ΑΠΟ…ΜΕΧΡΙ, με ισοδύναμο αποτέλεσμα.    </Info>
@@ -51,6 +53,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>100</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Η εντολή ΟΣΟ…ΕΠΑΝΑΛΑΒΕ επαναλαμβάνεται μέχρι η συνθήκη της να λάβει τιμή ΨΕΥΔΗΣ. </Info>
@@ -68,6 +71,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>100</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
   </Questions>
 </Data>

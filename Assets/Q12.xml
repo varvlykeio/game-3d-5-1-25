@@ -25,6 +25,7 @@
       <Timer>30</Timer>
       <Type>Multi</Type>
       <AddScore>500</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Οι λόγοι για τους οποίους ανατίθεται η λύση προβλημάτων σε υπολογιστή σχετίζονται με την/τον</Info>
@@ -50,6 +51,7 @@
       <Timer>33</Timer>
       <Type>Multi</Type>
       <AddScore>500</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Το πρόβλημα της εύρεσης της απόστασης που διάνυσε ένα σώμα το οποίο κινείται ευθύγραμμα και ομαλά, χωρίς να έχει επιτάχυνση, είναι:</Info>
@@ -75,6 +77,7 @@
       <Timer>44</Timer>
       <Type>Multi</Type>
       <AddScore>500</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
     <Info>Το παρακάτω τμήμα αλγορίθμου θα εμφανίσει την τιμή: 
@@ -101,6 +104,7 @@
       <Timer>33</Timer>
       <Type>Single</Type>
       <AddScore>500</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Οι λειτουργίες της Στοίβας είναι:</Info>
@@ -126,6 +130,7 @@
       <Timer>26</Timer>
       <Type>Multi</Type>
       <AddScore>500</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
   </Questions>
 </Data>

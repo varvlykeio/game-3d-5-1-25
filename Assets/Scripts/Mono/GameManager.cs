@@ -173,7 +173,16 @@ namespace Gamemanagera{
             bool isCorrect = CheckAnswers();
             FinishedQuestions.Add(currentQuestion);
 
-            UpdateScore(isCorrect ? data.Questions[currentQuestion].AddScore : -data.Questions[currentQuestion].AddScore);
+            if (data.Questions[currentQuestion].NegativeScore){
+                UpdateScore(isCorrect ? data.Questions[currentQuestion].AddScore : -data.Questions[currentQuestion].AddScore);
+                events.quizScore += isCorrect ? data.Questions[currentQuestion].AddScore : -data.Questions[currentQuestion].AddScore;
+            } 
+            else {
+                UpdateScore(isCorrect ? data.Questions[currentQuestion].AddScore : 0);
+                events.quizScore += isCorrect ? data.Questions[currentQuestion].AddScore : 0;
+            }
+            Debug.Log("Current score: " + events.quizScore);
+            
 
             if (IsFinished)
             {
@@ -191,7 +200,7 @@ namespace Gamemanagera{
                 : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
                 : UIManager.ResolutionScreenType.Incorrect;
 
-            events.DisplayResolutionScreen?.Invoke(type, data.Questions[currentQuestion].AddScore);
+            events.DisplayResolutionScreen?.Invoke(type, data.Questions[currentQuestion].AddScore,data.Questions[currentQuestion].NegativeScore);
 
             AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
 

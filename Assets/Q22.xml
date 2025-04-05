@@ -17,6 +17,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>75</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
      <Question>
       <Info>Ένας αλγόριθμος μπορεί να εκτελείται επ' άπειρον.  </Info>
@@ -34,6 +35,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>75</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Μια λογική μεταβλητή μπορεί να πάρει την τιμή ΑΛΗΘΗΣ ή την τιμή ΨΕΥΔΗΣ.    </Info>
@@ -51,6 +53,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>75</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Η  εντολή   X &lt;- Y+1 έχει  το   ίδιο   αποτέλεσμα  με   τη συνθήκη X = Y + 1. </Info>
@@ -68,6 +71,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>75</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
   </Questions>
 </Data>

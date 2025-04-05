@@ -33,6 +33,7 @@
       <Timer>30</Timer>
       <Type>Multi</Type>
       <AddScore>300</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>To όνομα μεταβλητής 23α είναι αποδεχτό στην ΓΛΩΣΣΑ</Info>
@@ -50,6 +51,7 @@
       <Timer>23</Timer>
       <Type>Single</Type>
       <AddScore>300</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>To σώμα εντολών που περιλαμβάνεται στην επαναληψη ΟΣΟ</Info>
@@ -71,6 +73,7 @@
       <Timer>30</Timer>
       <Type>Single</Type>
       <AddScore>300</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Μετά την εκτέλεση της εντολής 
@@ -94,6 +97,7 @@
       <Timer>23</Timer>
       <Type>Single</Type>
       <AddScore>300</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
   </Questions>      
 </Data>

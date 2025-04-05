@@ -17,6 +17,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>50</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
      <Question>
       <Info>Η εντολή εκχώρησης πρέπει υποχρεωτικά να έχει μόνο μία μεταβλητή στο αριστερό μέλος.  </Info>
@@ -34,6 +35,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>50</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Η μεταβλητή στο αριστερό μέλος μιας εντολής εκχώρησης τιμής πρέπει απαραίτητα να υπάρχει και στο δεξί μέλος της.   </Info>
@@ -51,6 +53,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>50</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Κατά την εκτέλεση του προγράμματος, η εντολή ΔΙΑΒΑΣΕ διακόπτει την εκτέλεσή του και περιμένει την εισαγωγή τιμών από τη πληκτρολόγιο.</Info>
@@ -68,6 +71,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>50</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
   </Questions>
 </Data>

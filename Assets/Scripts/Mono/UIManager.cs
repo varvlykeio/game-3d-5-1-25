@@ -125,9 +125,9 @@ public class UIManager : MonoBehaviour {
     /// <summary>
     /// Function that is used to display resolution screen.
     /// </summary>
-    void DisplayResolution(ResolutionScreenType type, int score)
+    void DisplayResolution(ResolutionScreenType type, int score, bool NegativeScore)
     {
-        UpdateResUI(type, score);
+        UpdateResUI(type, score,NegativeScore);
         uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 2);
         uIElements.MainCanvasGroup.blocksRaycasts = false;
 
@@ -151,7 +151,7 @@ public class UIManager : MonoBehaviour {
     /// <summary>
     /// Function that is used to display resolution UI information.
     /// </summary>
-    void UpdateResUI(ResolutionScreenType type, int score)
+    void UpdateResUI(ResolutionScreenType type, int score, bool NegativeScore)
     {
         var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
 
@@ -165,7 +165,12 @@ public class UIManager : MonoBehaviour {
             case ResolutionScreenType.Incorrect:
                 uIElements.ResolutionBG.color = parameters.IncorrectBGColor;
                 uIElements.ResolutionStateInfoText.text = "WRONG!";
-                uIElements.ResolutionScoreText.text = "-" + score;
+                if(NegativeScore){
+                    uIElements.ResolutionScoreText.text = "-" + score;
+                }
+                else{
+                    uIElements.ResolutionScoreText.text = "0";
+                }
                 break;
             case ResolutionScreenType.Finish:
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;

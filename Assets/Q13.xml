@@ -28,6 +28,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>1000</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
      <Question>
       <Info>Τα λογικά λάθη δεν προκαλούν τη διακοπή της εκτέλεσης του προγράμματος. </Info>
@@ -45,6 +46,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>1000</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info>Έστω ουρά που υλοποιείται με μονοδιάστατο πίνακα Ο[Ν]. Για τη διαχείριση των λειτουργιών της χρησιμοποιούνται μεταβλητές με ονόματα front και rear. Όταν η ουρά έχει μόνο ένα στοιχείο τοτε ισχύει πάντα ότι: </Info>
@@ -70,6 +72,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>1000</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info> Τι θα εμαφανίσει το παρακάτω τμήμ αλγορίθμου, στην περίπτωση που δοθεί η τιμή 15 για την μεταβλητή x και η τιμή 95 για την μεταβλητή y.
@@ -103,6 +106,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>1000</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
     <Question>
       <Info> Η παράλειψη δήλωσης μεταβλητής αποτελεί
@@ -125,6 +129,7 @@
       <Timer>22</Timer>
       <Type>Single</Type>
       <AddScore>1000</AddScore>
+      <NegativeScore>false</NegativeScore>
     </Question>
   </Questions>
 </Data>
