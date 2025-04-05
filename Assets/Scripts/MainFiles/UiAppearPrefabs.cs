@@ -3,19 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using System.Runtime.CompilerServices;
 //using TMPro;
 
 //εμφανιση του i στον ΑΤΜ 
 //το ιδιο αρχειο και για πορτες
-    public class UiAppearPrefab : MonoBehaviour
+public class UiAppearPrefab : MonoBehaviour
     {
         //[SerializeField] private TMP_Text customText;
-        private GameObject customText;   
+        [SerializeField] private GameObject customText;   
         [SerializeField] private new string name;  
+        private bool s;
+        public void Start(){
+            StartCoroutine(DelayedAwake());
 
-        public void Awake(){
-            customText = GameObject.FindGameObjectWithTag(name).transform.GetChild(0).gameObject;
-            customText.SetActive(false);
+            IEnumerator DelayedAwake()
+            {
+                yield return new WaitForSeconds(2f);
+                customText = GameObject.FindGameObjectWithTag(name).transform.GetChild(0).gameObject;
+                customText.SetActive(false);
+            }
         }
         
         void OnTriggerEnter(Collider other)
