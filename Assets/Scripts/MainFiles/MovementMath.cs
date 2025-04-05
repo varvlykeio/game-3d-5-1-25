@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,4 +9,4 @@ public class MovementMath : MonoBehaviour
     void Awake(){
         Cam.transform.position = new Vector3(-208.6f, 1.95f, 25.08f);
     }
-}
+}*/
