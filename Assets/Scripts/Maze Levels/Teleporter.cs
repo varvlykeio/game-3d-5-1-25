@@ -14,25 +14,22 @@ public class Teleporter : MonoBehaviour
 
     public void NegativeEnter(){
         CanvasEnter.SetActive(false);
-        events.CursorLock = true;
     }
 
     public void AffirmativeEnter(){
         Player.transform.position = new Vector3(-238, -4f, -36);
         Player.transform.rotation = Quaternion.Euler(0, 90, 0);
         CanvasEnter.SetActive(false);
-        events.CursorLock = true;
         events.Maze = true;
     }
     public void NegativeExit(){
         CanvasExit.SetActive(false);
-        events.CursorLock = true;
     }
 
     public void AffirmativeExit(){
-        Player.transform.position = new Vector3(-238, -4f, -36);
+        Player.transform.position = new Vector3(-203.2f, 0.3f, 36);
         CanvasExit.SetActive(false);
-        events.CursorLock = true;
         events.Maze = false;
+        events.TotalScore += 100;
     }
 }
