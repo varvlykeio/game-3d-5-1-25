@@ -7,6 +7,7 @@ using GameEv;
 using UnityEditor;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting.Dependencies.Sqlite;
 
 
 
@@ -19,18 +20,14 @@ namespace CC{
         public GameObject Player;
         public TMP_InputField TimeImp;
         public TMP_InputField TTime;
-
-        public bool[] Maze = {false,false,false,true};
-        public bool Maze1 = false;
-        public bool Maze2 = false;
-        public bool Maze3 = false;
-        public bool Maze4 = true;
+        public TMP_InputField CoinsScore;
+        public TMP_InputField MazeCoins;
+        public TMP_InputField Coins;
         public bool diadromos = true; // Checks if the player has entered a diadromos level to spawn the coins
         public bool changelevel = false; // Checks whether the level has changed to spawn Question machines. 
         public int level;
         public int levelch = -1;
         public int Question;
-
         [SerializeField]   public  GameEvents          events                  = null;
 
 
@@ -54,6 +51,7 @@ namespace CC{
                                       {    { -211.6f , 0f , 53f }      , { -78.6f  ,  0.01f , -11.57f }  ,   { 0 , 0 , 0 }  ,   { 0 , 0 , 0 }  ,   { 0 , 0 , 0 } },   //Question 2
                                       { { -800.6f , 0.01f , -15.65f }  , { -78.6f  ,  0.01f , -15.65f }  ,   { 0 , 0 , 0 }  ,   { 0 , 0 , 0 }  ,   { 0 , 0 , 0 } } }; //Question 3
         public GameObject coin;
+        [SerializeField]    GameObject[] walls = new GameObject[4];
 
         /*QuizCols1 scriptInstance1 = null;
         QuizCols2 scriptInstance2 = null;
@@ -61,12 +59,23 @@ namespace CC{
         //SceneChanger scriptInstance4 = null;
 
         public void Start(){
-                           
+            CoinR[0,5] = events.coins;
+            CoinR[1,5] = events.mazecoins;              
             TimeImp.text = events.timegravity.ToString();
             TTime.text = events.TotalTime.ToString();
+            CoinsScore.text = events.CoinImportance.ToString();
+            MazeCoins.text = events.mazecoins.ToString();
+            Coins.text = events.coins.ToString();
+
             if (events.pendingtransport == true){
                 Player.transform.position = events.playerposition;
                 events.pendingtransport = false;
+            }
+
+            for (int i = 0; i < 4; i++){
+                if (events.Walls[i]){
+                    walls[i].SetActive(true);
+                }
             }
             
             if (changelevel == true){
@@ -169,8 +178,10 @@ namespace CC{
         }
 
         public void TransportPlayer(){
-            events.pendingtransport = true;
-            events.pendingspawn = true;
+            if(events.Maze == true){
+                events.pendingtransport = true;
+            }
+            events.pendingdestroy = true;
         }
 
         public void OnApplicationQuit(){       
@@ -191,6 +202,7 @@ namespace CC{
             events.quizScore = 0;
             events.coinScore = 0;
             events.timerScore = 0;
+            events.TBDestroyed.Clear();
         }
 
        

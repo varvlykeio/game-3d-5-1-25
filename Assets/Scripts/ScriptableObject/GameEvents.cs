@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 
 namespace GameEv{
@@ -41,7 +42,7 @@ namespace GameEv{
         public                  int                                 timerScore                      = 0;
         public                  int                                 TScore                          = 0;  
         public                  float                               timeRemaining                   = 0;  
-        public                  float                               timegravity                     = 1f;         
+        public                  float                               timegravity                     ;         
         public                  bool                                isPaused                        = false;
         public                  bool                                QuizActive                      = false; 
         public                  int                                 HighScore                       = 0;
@@ -54,6 +55,10 @@ namespace GameEv{
         public                  Vector3                             playerposition                  = new Vector3(0,0,0);
         public                  bool                                Maze                            = false;
         public                  bool                                pendingtransport                = false;
-        public                  bool                                pendingspawn                    = false;
+        public                  bool                                pendingdestroy                  = false;
+        public                  List<Component>                     TBDestroyed                     = null; 
+        public                  int                                 mazecoins                       ;
+        public                  int                                 coins                           ;
+        public                  bool[]                              Walls                           = {false,false,false,false};
     }
 }
