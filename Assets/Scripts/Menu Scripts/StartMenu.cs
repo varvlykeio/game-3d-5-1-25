@@ -21,6 +21,8 @@ public class StartMenu : MonoBehaviour
     public int TTime;
     public int TimeImpact;  
     public int CoinScore;  
+    public int CoinAmmount;
+    public int MazeCoinAmmount;
     int p;
     int p2;
 
@@ -43,14 +45,17 @@ public class StartMenu : MonoBehaviour
             Debug.Log(CoinScore);
 
             SendValue("TotalTime","rtime", TTime);
+            SendValue("timegravity", TimeImpact);
             SendValue("CoinImportance", CoinScore);
+            SendValue("coins", CoinAmmount);
+            SendValue("mazecoins", MazeCoinAmmount);
             StartCoroutine(SaveIcon());
             SwitchToMainMenu();
         }
         else{
             StartCoroutine(NotSavedIcon());
         }
-        Debug.Log("Time: " + events.rtime + " Time Impact: " + events.timegravity);
+        Debug.Log("Time: " + events.rtime + " Time Impact: " + events.timegravity + " Coin Score: " + events.CoinImportance + " Coin Ammount: " + events.coins + " Maze Coin Ammount: " + events.mazecoins);
     }
 
   public void ReadTime(string s){
@@ -67,6 +72,20 @@ public class StartMenu : MonoBehaviour
     public void ReadCoinScore( string s){
         if (!string.IsNullOrEmpty(s)){
             CoinScore = int.Parse(s);
+        }
+    }
+    public void ReadCoinAmmount( string s){
+        Debug.Log("ENTER");
+        if (!string.IsNullOrEmpty(s)){
+            CoinAmmount = int.Parse(s);
+            Debug.Log("In ");
+        }
+    }
+    public void ReadMazeCoinAmmount( string s){
+        Debug.Log("ENTER2");
+        if (!string.IsNullOrEmpty(s)){
+            MazeCoinAmmount = int.Parse(s);
+            Debug.Log("In2 ");
         }
     }
 
