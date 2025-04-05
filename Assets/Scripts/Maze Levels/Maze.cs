@@ -62,6 +62,16 @@ public class Maze1 : MonoBehaviour
             UnityEngine.Vector3 ATMPos = new UnityEngine.Vector3(MazePos[ATM,0], MazePos[ATM,1], MazePos[ATM,2]);
 			UnityEngine.Quaternion CoinQ = UnityEngine.Quaternion.AngleAxis(MazePos[ATM,3], Vector3.up);
             Instantiate(pr, ATMPos, CoinQ);
+    }    
+	
+	public void Start(){   
+		//Debug.Log("Pass1");
+        if (events.pendingdestroy){
+			MazeStart();
+			//RespawnATMs();
+			//Debug.Log("Pass");
+			//events.pendingspawn = false;
+		}
     }
 	//List<GameObject> ATMList = new List<GameObject>();
     /*public void CaptureData()
@@ -108,15 +118,7 @@ public class Maze1 : MonoBehaviour
 		}
 		
 	}*/
-    public void Start(){   
-		//Debug.Log("Pass1");
-        if (events.pendingspawn){
-			MazeStart();
-			//RespawnATMs();
-			//Debug.Log("Pass");
-			//events.pendingspawn = false;
-		}
-    }
+
 
 
 

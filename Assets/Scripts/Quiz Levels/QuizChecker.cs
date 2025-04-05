@@ -37,13 +37,13 @@ namespace QuizCol {
 
                     pusher = true;
                     events.CursorLock = false;
-                    events.QuizStart = true;
                     events.Difficulty = dif;
                     events.level = level;
+                    events.QuizStart = true;
                     //wall.SetActive(true);
                     //events.currentlevel = level;
                     events.QuizActive = true;
-                    Destroy(GetComponent("UiAppear"));
+                    events.TBDestroyed.Add(GetComponent("UiAppear"));
                     // AddComponentMenu
                 }
             }
