@@ -9,22 +9,16 @@ public class SettingsPanel : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M) && !events.QuizActive && !events.GameFinished)
-        {
-            if (Settings != null)
-            {
-                Settings.SetActive(!Settings.activeSelf);
-                if (Settings.activeSelf)
-                {
-                    events.CursorLock = false;
-                    events.isPaused = true;
-                }
-                else
-                {
-                    events.CursorLock = true;
-                    events.isPaused = false;
-                }
+        if( Input.GetKeyDown(KeyCode.M) && !events.QuizActive && !events.GameFinished && !events.MenuOpen && Settings != null){
+            Settings.SetActive(!Settings.activeSelf);
+            if (Settings.activeSelf){
+                events.CursorLock = false;
+                events.isPaused = true;
             }
+            else{
+                events.CursorLock = true;
+                events.isPaused = false;
+            }    
         }
     }
 }

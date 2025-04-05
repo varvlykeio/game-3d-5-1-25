@@ -12,7 +12,8 @@ public class StartMenu : MonoBehaviour
     public GameObject SettingButtons;
     public GameObject MenuButtons;
     public GameObject TeacherSettingButtons;
-    public GameObject MainUI;
+    public GameObject score;
+    public GameObject timer;
     public GameObject SettingNotSaved;
     public GameObject SettingSaved;
     public GameEvents events;
@@ -27,7 +28,8 @@ public class StartMenu : MonoBehaviour
         events.isPaused = false;
         MenuCanvas.SetActive(false);
         events.CursorLock = true;
-        MainUI.SetActive(true);
+        timer.SetActive(true);
+        score.SetActive(true);
         events.MenuOpen = false; 
     }
     
@@ -38,7 +40,7 @@ public class StartMenu : MonoBehaviour
         
         if (TimeImpact>=0 && TimeImpact<=100){
             events.timegravity = TimeImpact; 
-            Debug.Log(Text.VarList[0]);
+            Debug.Log(CoinScore);
 
             SendValue("TotalTime","rtime", TTime);
             SendValue("CoinImportance", CoinScore);
@@ -130,41 +132,41 @@ public class StartMenu : MonoBehaviour
     public void SendValue(string variableName, object variable){
         p = Text.ComList.IndexOf(variableName);
         if (variable is string strValue){
-            Text.ComList[p] = strValue;
+            Text.VarList[p] = strValue;
             typeof(GameEvents).GetField(variableName).SetValue(events, strValue);
         }
         else if (variable is int intValue){
-            Text.ComList[p] = intValue.ToString();
+            Text.VarList[p] = intValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, intValue);
         }
         else if (variable is float floatValue){
-            Text.ComList[p] = floatValue.ToString();
+            Text.VarList[p] = floatValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, floatValue);
         }
         else if (variable is bool boolValue){
-            Text.ComList[p] = boolValue.ToString();
+            Text.VarList[p] = boolValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, boolValue);
         }      
     }
     public void SendValue(string variableName,string variableName2, object variable){
         p = Text.ComList.IndexOf(variableName);
         if (variable is string strValue){
-            Text.ComList[p] = strValue;
+            Text.VarList[p] = strValue;
             typeof(GameEvents).GetField(variableName).SetValue(events, strValue);
             typeof(GameEvents).GetField(variableName2).SetValue(events, strValue);
         }
         else if (variable is int intValue){
-            Text.ComList[p] = intValue.ToString();
+            Text.VarList[p] = intValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, intValue);
             typeof(GameEvents).GetField(variableName2).SetValue(events, intValue);
         }
         else if (variable is float floatValue){
-            Text.ComList[p] = floatValue.ToString();
+            Text.VarList[p] = floatValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, floatValue);
             typeof(GameEvents).GetField(variableName2).SetValue(events, floatValue);
         }
         else if (variable is bool boolValue){
-            Text.ComList[p] = boolValue.ToString();
+            Text.VarList[p] = boolValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, boolValue);
             typeof(GameEvents).GetField(variableName2).SetValue(events, boolValue);
         }      
@@ -173,23 +175,23 @@ public class StartMenu : MonoBehaviour
         p = Text.ComList.IndexOf(variableName);
         p2 = Text.ComList.IndexOf(variableName2);   
         if (variable is string strValue){
-            Text.ComList[p] = strValue;
-            Text.ComList[p2] = strValue;
+            Text.VarList[p] = strValue;
+            Text.VarList[p2] = strValue;
             typeof(GameEvents).GetField(variableName).SetValue(events, strValue);
         }
         else if (variable is int intValue){
-            Text.ComList[p] = intValue.ToString();
-            Text.ComList[p2] = intValue.ToString();
+            Text.VarList[p] = intValue.ToString();
+            Text.VarList[p2] = intValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, intValue);
         }
         else if (variable is float floatValue){
-            Text.ComList[p] = floatValue.ToString();
-            Text.ComList[p2] = floatValue.ToString();
+            Text.VarList[p] = floatValue.ToString();
+            Text.VarList[p2] = floatValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, floatValue);
         }
         else if (variable is bool boolValue){
-            Text.ComList[p] = boolValue.ToString();
-            Text.ComList[p2] = boolValue.ToString();
+            Text.VarList[p] = boolValue.ToString();
+            Text.VarList[p2] = boolValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, boolValue);
         }      
     }
@@ -197,26 +199,26 @@ public class StartMenu : MonoBehaviour
         p = Text.ComList.IndexOf(variableName);
         p2 = Text.ComList.IndexOf(variableName2);
         if (variable is string strValue){
-            Text.ComList[p] = strValue;
-            Text.ComList[p2] = strValue;
+            Text.VarList[p] = strValue;
+            Text.VarList[p2] = strValue;
             typeof(GameEvents).GetField(variableName).SetValue(events, strValue);
             typeof(GameEvents).GetField(variableName2).SetValue(events, strValue);
         }
         else if (variable is int intValue){
-            Text.ComList[p] = intValue.ToString();
-            Text.ComList[p2] = intValue.ToString();
+            Text.VarList[p] = intValue.ToString();
+            Text.VarList[p2] = intValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, intValue);
             typeof(GameEvents).GetField(variableName2).SetValue(events, intValue);
         }
         else if (variable is float floatValue){
-            Text.ComList[p] = floatValue.ToString();
-            Text.ComList[p2] = floatValue.ToString();
+            Text.VarList[p] = floatValue.ToString();
+            Text.VarList[p2] = floatValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, floatValue);
             typeof(GameEvents).GetField(variableName2).SetValue(events, floatValue);
         }
         else if (variable is bool boolValue){
-            Text.ComList[p] = boolValue.ToString(); 
-            Text.ComList[p2] = boolValue.ToString();
+            Text.VarList[p] = boolValue.ToString(); 
+            Text.VarList[p2] = boolValue.ToString();
             typeof(GameEvents).GetField(variableName).SetValue(events, boolValue);
             typeof(GameEvents).GetField(variableName2).SetValue(events, boolValue);
         }      
