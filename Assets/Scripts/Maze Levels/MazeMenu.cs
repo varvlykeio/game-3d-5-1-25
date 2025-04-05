@@ -7,15 +7,12 @@ public class MazeMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameEvents events;
-    void Update(){
-        if(events.isPaused == false){
-            if (events.triggered== true)
-            {
-            events.CursorLock = false;
-            }
-            else{
-                events.CursorLock = true; 
-            }
-        }
+    void OnTriggerEnter()
+    {
+        events.CursorLock = false;
+    }
+    void OnTriggerExit()
+    {
+        events.CursorLock = true;
     }
 }
