@@ -34,7 +34,6 @@ namespace CoinsNS
                 {
                     coins.SpawnCoin();
                 }
-                Debug.Log("Respawn");
                 Destroy(gameObject); 
             }
 

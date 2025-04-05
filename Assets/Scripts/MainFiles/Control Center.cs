@@ -184,9 +184,13 @@ namespace CC{
             events.coinScore = 0;
             events.timerScore = 0;
             events.isPaused = true;
-            events. GameFinished= false;
+            events.GameFinished= false;
             events.MenuOpen = true;  
             events.Maze = false;  
+            events.QuizActive = false;
+            events.quizScore = 0;
+            events.coinScore = 0;
+            events.timerScore = 0;
         }
 
        
