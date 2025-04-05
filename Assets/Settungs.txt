@@ -1,4 +1,6 @@
 500 ! TotalTime
 1 ! timegravity
-10 ! CoinImportance
+15 ! CoinImportance
 0 ! currentlevel
+0 ! coins
+0 ! mazecoins
