@@ -51,7 +51,8 @@ namespace CC{
                                       {    { -211.6f , 0f , 53f }      , { -78.6f  ,  0.01f , -11.57f }  ,   { 0 , 0 , 0 }  ,   { 0 , 0 , 0 }  ,   { 0 , 0 , 0 } },   //Question 2
                                       { { -800.6f , 0.01f , -15.65f }  , { -78.6f  ,  0.01f , -15.65f }  ,   { 0 , 0 , 0 }  ,   { 0 , 0 , 0 }  ,   { 0 , 0 , 0 } } }; //Question 3
         public GameObject coin;
-        [SerializeField]    GameObject[] walls = new GameObject[4];
+        [SerializeField]  private  GameObject[] walls = new GameObject[4];
+        [SerializeField] private GameObject ExitMazeButton;
 
         /*QuizCols1 scriptInstance1 = null;
         QuizCols2 scriptInstance2 = null;
@@ -115,7 +116,12 @@ namespace CC{
                 MCanvas.SetActive(true);
             }
             
-            
+            if(events.Maze){
+                ExitMazeButton.SetActive(true);
+            }
+            else{
+                ExitMazeButton.SetActive(false);
+            }
             
 
      
@@ -202,7 +208,6 @@ namespace CC{
             events.quizScore = 0;
             events.coinScore = 0;
             events.timerScore = 0;
-            events.TBDestroyed.Clear();
         }
 
        

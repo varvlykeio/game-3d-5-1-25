@@ -43,7 +43,7 @@ namespace QuizCol {
                     //wall.SetActive(true);
                     //events.currentlevel = level;
                     events.QuizActive = true;
-                    events.TBDestroyed.Add(GetComponent("UiAppear"));
+                    
                     // AddComponentMenu
                 }
             }

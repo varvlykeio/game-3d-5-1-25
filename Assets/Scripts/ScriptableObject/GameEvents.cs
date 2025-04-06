@@ -41,24 +41,23 @@ namespace GameEv{
         public                  int                                 quizScore                       = 0;
         public                  int                                 timerScore                      = 0;
         public                  int                                 TScore                          = 0;  
-        public                  float                               timeRemaining                   = 0;  
-        public                  float                               timegravity                     ;         
+        public                  float                               timeRemaining                   = 500;  
+        public                  float                               timegravity                     = 1.0f;         
         public                  bool                                isPaused                        = false;
         public                  bool                                QuizActive                      = false; 
         public                  int                                 HighScore                       = 0;
         public                  bool                                GameFinished                    = false;
         public                  bool                                MenuOpen                        = true;
-        public                  float                               TotalTime                       = 0;
-        public                  int                                 CoinImportance                  = 25;
+        public                  float                               TotalTime                       = 500;
+        public                  int                                 CoinImportance                  = 15;
         public                  bool                                triggered                       = false;
         public                  bool                                teleport                        = false;
         public                  Vector3                             playerposition                  = new Vector3(0,0,0);
         public                  bool                                Maze                            = false;
         public                  bool                                pendingtransport                = false;
         public                  bool                                pendingdestroy                  = false;
-        public                  List<Component>                     TBDestroyed                     = null; 
-        public                  int                                 mazecoins                       ;
-        public                  int                                 coins                           ;
+        public                  int                                 coins                           =20;
+        public                  int                                 mazecoins                       =50;
         public                  bool[]                              Walls                           = {false,false,false,false};
     }
 }

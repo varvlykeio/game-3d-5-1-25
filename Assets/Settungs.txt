@@ -2,5 +2,5 @@
 1 ! timegravity
 15 ! CoinImportance
 0 ! currentlevel
-0 ! coins
-0 ! mazecoins
+15 ! coins
+10 ! mazecoins

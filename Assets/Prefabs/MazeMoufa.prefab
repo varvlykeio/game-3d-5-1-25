@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d3f139023cb4911499b7c10a0929e591, type: 2}
+  - {fileID: 2100000, guid: ce03f7408cf481d4dbca58fd123080fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca63ec82d4e48246b864f97e0cf0747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customText: {fileID: 0}
   name: OOR
 --- !u!65 &8559980369503641023
 BoxCollider:

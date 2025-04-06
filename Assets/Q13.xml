@@ -103,7 +103,7 @@
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>22</Timer>
+      <Timer>40</Timer>
       <Type>Single</Type>
       <AddScore>1000</AddScore>
       <NegativeScore>false</NegativeScore>

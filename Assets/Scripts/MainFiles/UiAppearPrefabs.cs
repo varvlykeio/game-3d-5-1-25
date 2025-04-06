@@ -20,7 +20,7 @@ public class UiAppearPrefab : MonoBehaviour
 
             IEnumerator DelayedAwake()
             {
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(0.5f);
                 customText = GameObject.FindGameObjectWithTag(name).transform.GetChild(0).gameObject;
                 customText.SetActive(false);
             }

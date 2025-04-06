@@ -10,7 +10,7 @@ public class Teleporter : MonoBehaviour
     public GameObject CanvasExit;
     public GameObject Player;
     public GameEvents events;
-
+    public GameObject SettingsPanel;
 
     public void NegativeEnter(){
         CanvasEnter.SetActive(false);
@@ -28,8 +28,12 @@ public class Teleporter : MonoBehaviour
 
     public void AffirmativeExit(){
         Player.transform.position = new Vector3(-203.2f, 0.3f, 36);
+        Player.transform.rotation = Quaternion.Euler(0, -90, 0);
         CanvasExit.SetActive(false);
         events.Maze = false;
+        SettingsPanel.SetActive(false);
+    }
+    public void AddScore(){
         events.TotalScore += 100;
     }
 }

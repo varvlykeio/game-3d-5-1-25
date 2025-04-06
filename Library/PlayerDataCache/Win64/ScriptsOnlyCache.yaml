@@ -27,15 +27,12 @@ ScriptsOnlyBuild:
     - UiAppear
     - UiAppearPrefab
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -125,19 +122,31 @@ ScriptsOnlyBuild:
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: Teleporter
-    methodName: Negative
+    methodName: AffirmativeExit
+  - assembly: Assembly-CSharp
+    fullTypeName: Teleporter
+    methodName: AddScore
+  - assembly: Assembly-CSharp
+    fullTypeName: Teleporter
+    methodName: NegativeEnter
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
     methodName: StartGame
+  - assembly: Assembly-CSharp
+    fullTypeName: StartMenu
+    methodName: ReadCoinScore
+  - assembly: Assembly-CSharp
+    fullTypeName: Teleporter
+    methodName: AffirmativeExit
+  - assembly: Assembly-CSharp
+    fullTypeName: StartMenu
+    methodName: ReadMazeCoinAmount
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
     methodName: SaveSettings
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
     methodName: SwitchToSettings
-  - assembly: Assembly-CSharp
-    fullTypeName: Maze1
-    methodName: MazeStart
   - assembly: Assembly-CSharp
     fullTypeName: Resolution.ResolutionScore
     methodName: GameEnd
@@ -157,14 +166,20 @@ ScriptsOnlyBuild:
     fullTypeName: StartMenu
     methodName: SwitchToMainMenu
   - assembly: Assembly-CSharp
+    fullTypeName: Teleporter
+    methodName: NegativeEnter
+  - assembly: Assembly-CSharp
     fullTypeName: StartMenu
     methodName: ReadTimeImpact
+  - assembly: Assembly-CSharp
+    fullTypeName: StartMenu
+    methodName: ReadCoinAmount
   - assembly: Assembly-CSharp
     fullTypeName: StartMenu
     methodName: SwitchToMainMenu
   - assembly: Assembly-CSharp
     fullTypeName: Teleporter
-    methodName: Affirmative
+    methodName: AffirmativeEnter
   - assembly: Assembly-CSharp
     fullTypeName: Maze1
     methodName: MazeStart
@@ -251,57 +266,57 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3514}
     - Class: 114
-      Script: {instanceID: 3636}
+      Script: {instanceID: 3560}
     - Class: 114
-      Script: {instanceID: 3674}
+      Script: {instanceID: 3638}
     - Class: 114
-      Script: {instanceID: 3812}
+      Script: {instanceID: 3676}
     - Class: 114
-      Script: {instanceID: 4126}
+      Script: {instanceID: 3814}
     - Class: 114
-      Script: {instanceID: 4238}
+      Script: {instanceID: 4128}
     - Class: 114
-      Script: {instanceID: 4254}
+      Script: {instanceID: 4240}
     - Class: 114
-      Script: {instanceID: 4366}
+      Script: {instanceID: 4256}
     - Class: 114
-      Script: {instanceID: 4508}
+      Script: {instanceID: 4368}
     - Class: 114
-      Script: {instanceID: 4518}
+      Script: {instanceID: 4510}
     - Class: 114
-      Script: {instanceID: 4524}
+      Script: {instanceID: 4520}
     - Class: 114
-      Script: {instanceID: 5044}
+      Script: {instanceID: 4526}
     - Class: 114
-      Script: {instanceID: 5074}
+      Script: {instanceID: 5046}
     - Class: 114
-      Script: {instanceID: 5138}
+      Script: {instanceID: 5076}
     - Class: 114
-      Script: {instanceID: 5270}
+      Script: {instanceID: 5140}
     - Class: 114
-      Script: {instanceID: 5278}
+      Script: {instanceID: 5272}
     - Class: 114
-      Script: {instanceID: 5394}
+      Script: {instanceID: 5280}
     - Class: 114
-      Script: {instanceID: 5546}
+      Script: {instanceID: 5396}
     - Class: 114
-      Script: {instanceID: 5902}
+      Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 6024}
+      Script: {instanceID: 5904}
     - Class: 114
-      Script: {instanceID: 6200}
+      Script: {instanceID: 6026}
     - Class: 114
-      Script: {instanceID: 6364}
+      Script: {instanceID: 6202}
     - Class: 114
-      Script: {instanceID: 6372}
+      Script: {instanceID: 6366}
     - Class: 114
-      Script: {instanceID: 6594}
+      Script: {instanceID: 6374}
     - Class: 114
-      Script: {instanceID: 7214}
+      Script: {instanceID: 6596}
     - Class: 114
-      Script: {instanceID: 7458}
+      Script: {instanceID: 7216}
     - Class: 114
-      Script: {instanceID: 68654}
+      Script: {instanceID: 7460}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -371,7 +386,7 @@ ScriptsOnlyBuild:
     className: RestartTrigger
   - hash:
       serializedVersion: 2
-      Hash: 469ba08e1d09c6112c5d7a12c905da76
+      Hash: 91fa89644c8a30489d05e2976f748371
     assemblyName: Assembly-CSharp
     namespaceName: CoinsNS
     className: Coin
@@ -419,13 +434,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 6667508cfe60430780b145e561b6b068
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MovementMath
-  - hash:
-      serializedVersion: 2
-      Hash: b005262f6eaf7eb8235a5ba0ae1bedba
+      Hash: 8488bb9347a74b1d44b4d7121e627948
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Teleporter
@@ -473,13 +482,7 @@ ScriptsOnlyBuild:
     className: QuizCols
   - hash:
       serializedVersion: 2
-      Hash: d371276e9b6907e4b614edafbb583fb9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Movement
-  - hash:
-      serializedVersion: 2
-      Hash: 897d00c0d1999aba863d4dbba2857542
+      Hash: a997744fe803420cd51b6fa12a8d1c40
     assemblyName: Assembly-CSharp
     namespaceName: GameEv
     className: GameEvents
@@ -623,7 +626,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b8dd3ddf6461ea5abfa9c18615f78d90
+      Hash: 40837a07aeeccaf8304131f9ce36c724
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MazeMenu
@@ -653,7 +656,7 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0475e030f664d660de341be45e971234
+      Hash: 777066483eabd887495703288b4e123a
     assemblyName: Assembly-CSharp
     namespaceName: CC
     className: ControlCenter
@@ -705,6 +708,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: e0356d6ac44df8215c2910f3e1e5a38a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UiAppearPrefab
   - hash:
       serializedVersion: 2
       Hash: cf32d98954e63b8e30e9334b152e9b8e
@@ -971,7 +980,7 @@ ScriptsOnlyBuild:
     className: TransitionArmModel
   - hash:
       serializedVersion: 2
-      Hash: 498c28d1a108d7f3cbd17993a1205852
+      Hash: 4080b3b734f570d8cfc6845f2ae83d38
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: StartMenu
@@ -1389,12 +1398,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: db8ed62e97d0425a1e9db7171b145650
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UiAppearPrefab
   platform: 19
   scenePathNames:
   - Assets/Scenes/Game.unity
